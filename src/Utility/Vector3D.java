@@ -47,6 +47,31 @@ public class Vector3D {
         return vector;
     }
 
+    // DIVIDE WITH DOUBLE
+    public Vector3D divideWithDouble(double a){
+        Vector3D vector = new Vector3D(
+                (this.getX() / a),
+                (this.getY() / a),
+                (this.getZ() /a )
+        );
+        return vector;
+    }
+
+    // MODULUS AND MODULUS SQUARED
+    public double mod(){
+        double x = (this.getX() * this.getX()) +
+                   (this.getY() * this.getY()) +
+                   (this.getZ() * this.getZ());
+        x = Math.pow(x, 0.5);
+        return x;
+    }
+    public double modSquared(){
+        double x = (this.getX() * this.getX()) +
+                   (this.getY() * this.getY()) +
+                   (this.getZ() * this.getZ());
+        return x;
+    }
+
     //DOT PRODUCT
     public double dot(Vector3D v){
         double x =
@@ -73,6 +98,11 @@ public class Vector3D {
         return x;
     }
 
+    //CROSS PRODUCT
+    public Vector3D cross(Vector3D v){
+        
+
+    }
 // SETTERS AND GETTERS
     public double getX(){
         return this.x;
