@@ -100,7 +100,12 @@ public class Vector3D {
 
     //CROSS PRODUCT
     public Vector3D cross(Vector3D v){
-        
+        Vector3D vector = new Vector3D(((this.getY() * v.getZ()) - (this.getZ() * v.getY())),
+                                       ((this.getZ() * v.getX()) - (this.getX() * v.getZ())),
+                                       ((this.getX() * v.getY()) - (this.getY() * v.getX()))
+        );
+
+        return vector;
 
     }
 // SETTERS AND GETTERS
