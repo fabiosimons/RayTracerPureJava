@@ -1,7 +1,9 @@
 package World;
 
 import GeometricObjects.Object;
+import GeometricObjects.Plane;
 import GeometricObjects.Sphere;
+import Tracer.ManyObjects;
 import Tracer.OneSphere;
 import Tracer.RayTracer;
 import Utility.*;
@@ -14,9 +16,12 @@ public class Scene {
     ViewPlane vp;
     Color background_color;
     public Sphere sphere;
+    public Sphere sphere2;
+    public Plane plane;
+
     RayTracer tracer;
     BufferedImage buffer;
-    ArrayList<Object> objects;
+    ArrayList<Object> objects = new ArrayList<>();
 
     public Scene(){
     }
@@ -28,8 +33,6 @@ public class Scene {
 
     public RayHit HitObjects(Ray ray){
         RayHit hit = new RayHit(this);
-        double t;
-        int numOfObjects = objects.size();
 
         for(Object o : objects){
             if (o.Hit(ray)){
@@ -44,8 +47,16 @@ public class Scene {
     public void build(){
         vp = new ViewPlane(800, 800, 1.0f);
         background_color = new Color();
+
         sphere = new Sphere(100, new Color(1.0f,0.0f,0.0f));
         sphere.setCenter(new Point3D(100.0,0.0,0.0));
+        addObject(sphere);
+
+        sphere2 = new Sphere(100, new Color(0.0f,0.0f,155.0f));
+        sphere2.setCenter(new Point3D(-50.0,0.0,0.0));
+        addObject(sphere2);
+
+
     }
 
     // RENDER THE SCENE
@@ -53,9 +64,9 @@ public class Scene {
         Color pixelColor;
         Ray ray = new Ray();
 
-        double zw = 70.0;
+        double zw = 70;
         double x,y;
-        tracer = new OneSphere(this);
+        tracer = new ManyObjects(this);
         ray.setDirection(new Vector3D(0,0,-1));
 
         long start = System.nanoTime();

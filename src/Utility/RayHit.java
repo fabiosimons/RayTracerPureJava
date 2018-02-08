@@ -19,9 +19,14 @@ public class RayHit {
         this.hit = hit;
     }
     public void setHitPoint(){
-
+    }
+    public boolean Hit(){
+        return this.hit;
     }
     public void setScene(){
+    }
+    public Color getColor(){
+        return this.color;
     }
     public void setColor(Color color){
         this.color = color;
