@@ -13,6 +13,7 @@ public class Point3D {
         setY(point.getY());
         setZ(point.getZ());
     }
+
     //DOT PRODUCT
     public double dot(Vector3D v){
         double x =
@@ -63,6 +64,31 @@ public class Point3D {
                 (this.getX() + v.getX()),
                 (this.getY() + v.getY()),
                 (this.getZ() + v.getZ())
+        );
+        return point;
+    }
+
+    // MODULUS AND MODULUS SQUARED
+    public double mod(){
+        double x = (this.getX() * this.getX()) +
+                (this.getY() * this.getY()) +
+                (this.getZ() * this.getZ());
+        x = Math.pow(x, 0.5);
+        return x;
+    }
+    public double modSquared(){
+        double x = (this.getX() * this.getX()) +
+                (this.getY() * this.getY()) +
+                (this.getZ() * this.getZ());
+        return x;
+    }
+
+    // MULTIPLICATION OF A point AND A DOUBLE
+    public Point3D multiplyAWithPoint(double a){
+        Point3D point = new Point3D(
+                (a * this.getX()),
+                (a * this.getY()),
+                (a * this.getZ())
         );
         return point;
     }

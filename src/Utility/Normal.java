@@ -45,6 +45,43 @@ public class Normal {
         return x;
     }
 
+    // MINUS NORMAL
+    public Normal invertNormal(Normal n){
+        Normal normal = new Normal(-this.getX(), -this.getY(), -this.getZ());
+        return normal;
+
+    }
+
+    //add normal
+    public Normal add(Normal n){
+        Normal normal = new Normal(
+                (this.getX() + n.getX()),
+                this.getY() + n.getY(),
+                this.getZ() + n.getZ());
+
+        return normal;
+    }
+    public Vector3D add(Vector3D v){
+        Vector3D  vector = new Vector3D (
+                (this.getX() + v.getX()),
+                this.getY() + v.getY(),
+                this.getZ() + v.getZ());
+
+        return vector;
+    }
+
+    // MULTIPLY NORMAL WITH A DOUBLE
+    public Normal multiplyAWithNormal(double a){
+        Normal normal = new Normal(
+                (a * this.getX()),
+                (a * this.getY()),
+                (a * this.getZ())
+        );
+        return normal;
+    }
+
+    // 
+
     // SETTERS AND GETTERS
     public double getX(){
         return this.x;

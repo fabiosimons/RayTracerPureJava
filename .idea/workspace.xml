@@ -37,8 +37,8 @@
       <file leaf-file-name="Point3D.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Utility/Point3D.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="88" column="1" lean-forward="false" selection-start-line="88" selection-start-column="1" selection-end-line="88" selection-end-column="1" />
+            <state relative-caret-position="425">
+              <caret line="86" column="4" lean-forward="false" selection-start-line="86" selection-start-column="4" selection-end-line="93" selection-end-column="5" />
               <folding>
                 <element signature="method#Point3D#0;class#Point3D#0" expanded="false" />
                 <element signature="method#Point3D#1;class#Point3D#0" expanded="false" />
@@ -48,16 +48,19 @@
                 <element signature="method#sub#0;class#Point3D#0" expanded="false" />
                 <element signature="method#sub#1;class#Point3D#0" expanded="false" />
                 <element signature="method#add#0;class#Point3D#0" expanded="false" />
+                <element signature="method#mod#0;class#Point3D#0" expanded="false" />
+                <element signature="method#modSquared#0;class#Point3D#0" expanded="false" />
+                <element signature="method#multiplyAWithPoint#0;class#Point3D#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Vector3D.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Vector3D.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Utility/Vector3D.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="714">
-              <caret line="107" column="22" lean-forward="false" selection-start-line="107" selection-start-column="22" selection-end-line="107" selection-end-column="22" />
+            <state relative-caret-position="357">
+              <caret line="47" column="5" lean-forward="true" selection-start-line="39" selection-start-column="4" selection-end-line="47" selection-end-column="5" />
               <folding>
                 <element signature="method#Vector3D#1;class#Vector3D#0" expanded="false" />
                 <element signature="method#add#0;class#Vector3D#0" expanded="false" />
@@ -74,11 +77,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Normal.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Normal.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Utility/Normal.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="47" column="26" lean-forward="false" selection-start-line="47" selection-start-column="26" selection-end-line="47" selection-end-column="26" />
+            <state relative-caret-position="408">
+              <caret line="82" column="7" lean-forward="false" selection-start-line="82" selection-start-column="7" selection-end-line="82" selection-end-column="7" />
               <folding>
                 <element signature="method#Normal#0;class#Normal#0" expanded="false" />
                 <element signature="method#Normal#1;class#Normal#0" expanded="false" />
@@ -86,6 +89,10 @@
                 <element signature="method#dot#0;class#Normal#0" expanded="false" />
                 <element signature="method#dot#1;class#Normal#0" expanded="false" />
                 <element signature="method#dot#2;class#Normal#0" expanded="false" />
+                <element signature="method#invertNormal#0;class#Normal#0" expanded="false" />
+                <element signature="method#add#0;class#Normal#0" expanded="false" />
+                <element signature="method#add#1;class#Normal#0" expanded="false" />
+                <element signature="method#multiplyAWithNormal#0;class#Normal#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -178,12 +185,12 @@
         <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/World/Scene.java" />
         <option value="$PROJECT_DIR$/src/World/ViewPlane.java" />
-        <option value="$PROJECT_DIR$/src/Utility/Point3D.java" />
-        <option value="$PROJECT_DIR$/src/Utility/Normal.java" />
         <option value="$PROJECT_DIR$/src/Utility/Color.java" />
         <option value="$PROJECT_DIR$/src/GeometricObjects/Sphere.java" />
         <option value="$PROJECT_DIR$/src/GeometricObjects/Object.java" />
         <option value="$PROJECT_DIR$/src/Utility/Vector3D.java" />
+        <option value="$PROJECT_DIR$/src/Utility/Point3D.java" />
+        <option value="$PROJECT_DIR$/src/Utility/Normal.java" />
       </list>
     </option>
   </component>
@@ -209,8 +216,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -251,8 +256,10 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="RunDashboard">
@@ -448,6 +455,10 @@
             <element signature="method#dot#0;class#Normal#0" expanded="false" />
             <element signature="method#dot#1;class#Normal#0" expanded="false" />
             <element signature="method#dot#2;class#Normal#0" expanded="false" />
+            <element signature="method#invertNormal#0;class#Normal#0" expanded="false" />
+            <element signature="method#add#0;class#Normal#0" expanded="false" />
+            <element signature="method#add#1;class#Normal#0" expanded="false" />
+            <element signature="method#multiplyAWithNormal#0;class#Normal#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -541,6 +552,9 @@
             <element signature="method#sub#0;class#Point3D#0" expanded="false" />
             <element signature="method#sub#1;class#Point3D#0" expanded="false" />
             <element signature="method#add#0;class#Point3D#0" expanded="false" />
+            <element signature="method#mod#0;class#Point3D#0" expanded="false" />
+            <element signature="method#modSquared#0;class#Point3D#0" expanded="false" />
+            <element signature="method#multiplyAWithPoint#0;class#Point3D#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -575,6 +589,10 @@
             <element signature="method#dot#0;class#Normal#0" expanded="false" />
             <element signature="method#dot#1;class#Normal#0" expanded="false" />
             <element signature="method#dot#2;class#Normal#0" expanded="false" />
+            <element signature="method#invertNormal#0;class#Normal#0" expanded="false" />
+            <element signature="method#add#0;class#Normal#0" expanded="false" />
+            <element signature="method#add#1;class#Normal#0" expanded="false" />
+            <element signature="method#multiplyAWithNormal#0;class#Normal#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -656,6 +674,9 @@
             <element signature="method#sub#0;class#Point3D#0" expanded="false" />
             <element signature="method#sub#1;class#Point3D#0" expanded="false" />
             <element signature="method#add#0;class#Point3D#0" expanded="false" />
+            <element signature="method#mod#0;class#Point3D#0" expanded="false" />
+            <element signature="method#modSquared#0;class#Point3D#0" expanded="false" />
+            <element signature="method#multiplyAWithPoint#0;class#Point3D#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -711,6 +732,10 @@
             <element signature="method#dot#0;class#Normal#0" expanded="false" />
             <element signature="method#dot#1;class#Normal#0" expanded="false" />
             <element signature="method#dot#2;class#Normal#0" expanded="false" />
+            <element signature="method#invertNormal#0;class#Normal#0" expanded="false" />
+            <element signature="method#add#0;class#Normal#0" expanded="false" />
+            <element signature="method#add#1;class#Normal#0" expanded="false" />
+            <element signature="method#multiplyAWithNormal#0;class#Normal#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -780,6 +805,9 @@
             <element signature="method#sub#0;class#Point3D#0" expanded="false" />
             <element signature="method#sub#1;class#Point3D#0" expanded="false" />
             <element signature="method#add#0;class#Point3D#0" expanded="false" />
+            <element signature="method#mod#0;class#Point3D#0" expanded="false" />
+            <element signature="method#modSquared#0;class#Point3D#0" expanded="false" />
+            <element signature="method#multiplyAWithPoint#0;class#Point3D#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -901,38 +929,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Utility/Point3D.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="88" column="1" lean-forward="false" selection-start-line="88" selection-start-column="1" selection-end-line="88" selection-end-column="1" />
-          <folding>
-            <element signature="method#Point3D#0;class#Point3D#0" expanded="false" />
-            <element signature="method#Point3D#1;class#Point3D#0" expanded="false" />
-            <element signature="method#dot#0;class#Point3D#0" expanded="false" />
-            <element signature="method#dot#1;class#Point3D#0" expanded="false" />
-            <element signature="method#dot#2;class#Point3D#0" expanded="false" />
-            <element signature="method#sub#0;class#Point3D#0" expanded="false" />
-            <element signature="method#sub#1;class#Point3D#0" expanded="false" />
-            <element signature="method#add#0;class#Point3D#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Utility/Normal.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="47" column="26" lean-forward="false" selection-start-line="47" selection-start-column="26" selection-end-line="47" selection-end-column="26" />
-          <folding>
-            <element signature="method#Normal#0;class#Normal#0" expanded="false" />
-            <element signature="method#Normal#1;class#Normal#0" expanded="false" />
-            <element signature="method#Normal#2;class#Normal#0" expanded="false" />
-            <element signature="method#dot#0;class#Normal#0" expanded="false" />
-            <element signature="method#dot#1;class#Normal#0" expanded="false" />
-            <element signature="method#dot#2;class#Normal#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Utility/Color.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -994,8 +990,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Utility/Vector3D.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="107" column="22" lean-forward="false" selection-start-line="107" selection-start-column="22" selection-end-line="107" selection-end-column="22" />
+        <state relative-caret-position="357">
+          <caret line="47" column="5" lean-forward="true" selection-start-line="39" selection-start-column="4" selection-end-line="47" selection-end-column="5" />
           <folding>
             <element signature="method#Vector3D#1;class#Vector3D#0" expanded="false" />
             <element signature="method#add#0;class#Vector3D#0" expanded="false" />
@@ -1007,6 +1003,45 @@
             <element signature="method#dot#0;class#Vector3D#0" expanded="false" />
             <element signature="method#dot#1;class#Vector3D#0" expanded="false" />
             <element signature="method#dot#2;class#Vector3D#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Utility/Point3D.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="86" column="4" lean-forward="false" selection-start-line="86" selection-start-column="4" selection-end-line="93" selection-end-column="5" />
+          <folding>
+            <element signature="method#Point3D#0;class#Point3D#0" expanded="false" />
+            <element signature="method#Point3D#1;class#Point3D#0" expanded="false" />
+            <element signature="method#dot#0;class#Point3D#0" expanded="false" />
+            <element signature="method#dot#1;class#Point3D#0" expanded="false" />
+            <element signature="method#dot#2;class#Point3D#0" expanded="false" />
+            <element signature="method#sub#0;class#Point3D#0" expanded="false" />
+            <element signature="method#sub#1;class#Point3D#0" expanded="false" />
+            <element signature="method#add#0;class#Point3D#0" expanded="false" />
+            <element signature="method#mod#0;class#Point3D#0" expanded="false" />
+            <element signature="method#modSquared#0;class#Point3D#0" expanded="false" />
+            <element signature="method#multiplyAWithPoint#0;class#Point3D#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Utility/Normal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="82" column="7" lean-forward="false" selection-start-line="82" selection-start-column="7" selection-end-line="82" selection-end-column="7" />
+          <folding>
+            <element signature="method#Normal#0;class#Normal#0" expanded="false" />
+            <element signature="method#Normal#1;class#Normal#0" expanded="false" />
+            <element signature="method#Normal#2;class#Normal#0" expanded="false" />
+            <element signature="method#dot#0;class#Normal#0" expanded="false" />
+            <element signature="method#dot#1;class#Normal#0" expanded="false" />
+            <element signature="method#dot#2;class#Normal#0" expanded="false" />
+            <element signature="method#invertNormal#0;class#Normal#0" expanded="false" />
+            <element signature="method#add#0;class#Normal#0" expanded="false" />
+            <element signature="method#add#1;class#Normal#0" expanded="false" />
+            <element signature="method#multiplyAWithNormal#0;class#Normal#0" expanded="false" />
           </folding>
         </state>
       </provider>
