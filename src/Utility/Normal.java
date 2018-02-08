@@ -80,7 +80,7 @@ public class Normal {
         return normal;
     }
 
-    // 
+    //
 
     // SETTERS AND GETTERS
     public double getX(){

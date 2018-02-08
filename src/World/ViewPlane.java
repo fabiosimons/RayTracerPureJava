@@ -1,9 +1,10 @@
 package World;
 
 public class ViewPlane {
-    public int m_horizontalRes;   // HORIZONTAL IMAGE RESOLUTION
-    public int m_VerticalRes;   // VERTICAL IMAGE RESOLUTION
-    public float m_pixelSize;  // size of pixel
+    public int horizontalRes;   // HORIZONTAL IMAGE RESOLUTION
+    public int verticalRes;   // VERTICAL IMAGE RESOLUTION
+    public float pixelSize;  // size of pixel
+    public float gamma;
 
     public ViewPlane(int horizontal, int vertical, float pixelSize){
         setHorizontalRes(horizontal);
@@ -11,21 +12,21 @@ public class ViewPlane {
         setPixelSize(pixelSize);
     }
     public void setHorizontalRes(int horizontalRes){
-        m_horizontalRes = horizontalRes;
+        this.horizontalRes = horizontalRes;
     }
     public void setVerticalRes(int verticalRes){
-        m_VerticalRes = verticalRes;
+        this.verticalRes = verticalRes;
     }
     public void setPixelSize(float pixelSize){
-        m_pixelSize = pixelSize;
+        this.pixelSize = pixelSize;
     }
     public int getHorizontalRes(){
-        return m_horizontalRes;
+        return this.horizontalRes;
     }
     public int getVerticalRes(){
-        return m_VerticalRes;
+        return this.verticalRes;
     }
     public float getPixelSize(){
-        return this.m_pixelSize;
+        return this.pixelSize;
     }
 }
