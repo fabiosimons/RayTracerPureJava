@@ -23,14 +23,20 @@ public class Scene {
     BufferedImage buffer;
     ArrayList<Object> objects = new ArrayList<>();
 
+    // DEFAULT CONSTRUCTOR
     public Scene(){
     }
 
-    // ADD OBJECTS TO SCENE
+    // ADD OBJECTS TO SCENE (arraylist)
     public void addObject(Object object){
         objects.add(object);
     }
 
+    /*
+    detects whether rays hit any of the objects within the scene (from arraylist of objects)
+    sets color and whether rayhit = true/false
+    @return RayHit
+     */
     public RayHit HitObjects(Ray ray){
         RayHit hit = new RayHit(this);
 
@@ -43,7 +49,7 @@ public class Scene {
         return hit;
     }
 
-    // CREATE THE OBJECTS AND THE SCENE
+    // Initialse viewplane and objects in the scene
     public void build(){
         vp = new ViewPlane(800, 800, 1.0f);
         background_color = new Color();
@@ -55,11 +61,15 @@ public class Scene {
         sphere2 = new Sphere(100, new Color(0.0f,0.0f,155.0f));
         sphere2.setCenter(new Point3D(-50.0,0.0,0.0));
         addObject(sphere2);
-
-
     }
 
-    // RENDER THE SCENE
+    /*
+    Renders the scene
+    creates new file and buffered
+    initialises ray and loops through each pixel in the viewplane firing rays from the origin
+    sets rgb values for each pixel in buffered image
+    Calculates the time it takes to create the ray traced image and prints
+     */
     public void renderScene(){
         Color pixelColor;
         Ray ray = new Ray();
@@ -95,6 +105,7 @@ public class Scene {
         System.out.println(timeTaken / 1000000000.0);
     }
 
+    // set rgb value of current pixel in the buffered image
     public void setPixel(int row, int column, Color pixelColor){
         buffer.setRGB(row,column,pixelColor.toInteger());
 
