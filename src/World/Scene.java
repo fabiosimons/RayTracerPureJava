@@ -1,13 +1,14 @@
 package World;
 
 import GeometricObjects.Object;
-import GeometricObjects.Plane;
 import GeometricObjects.Sphere;
 import Tracer.ManyObjects;
+import Tracer.OneSphere;
 import Tracer.RayTracer;
 import Utility.*;
+import Utility.Color;
+
 import javax.imageio.ImageIO;
-import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.util.ArrayList;
@@ -42,7 +43,7 @@ public class Scene {
         for(Object o : objects){
             if (o.Hit(ray)){
                 hit.setHit(true);
-                hit.setColor(new Color(o.color.getRGB()));
+                hit.setColor(o.color);
             }
         }
         return hit;
@@ -51,13 +52,14 @@ public class Scene {
     // Initialse viewplane and objects in the scene
     public void build(){
         vp = new ViewPlane(800, 800, 1.0f);
+        vp.setNumOfSamples(64);
         background_color = new Color(0,0,0);
 
-        sphere = new Sphere(100, new Color(255,255,0));
+        sphere = new Sphere(100, new Color(255.0f,155.0f,0.0f));
         sphere.setCenter(new Point3D(100.0,0.0,0.0));
         addObject(sphere);
 
-        sphere2 = new Sphere(100, new Color(0,0,255));
+        sphere2 = new Sphere(100, new Color(0.0f,0.0f,255.0f));
         sphere2.setCenter(new Point3D(-50.0,0.0,0.0));
         addObject(sphere2);
     }
@@ -69,13 +71,17 @@ public class Scene {
     sets rgb values for each pixel in buffered image
     Calculates the time it takes to create the ray traced image and prints
      */
-    public void renderScene(){
+    public void render(){
         Color pixelColor;
         Ray ray = new Ray();
 
         double zw = 70;
         double x,y;
-        tracer = new ManyObjects(this);
+        tracer = new OneSphere(this);
+
+        int n = (int)Math.sqrt((float)vp.numOfSamples);
+        Point2D point = new Point2D();
+
         ray.setDirection(new Vector3D(0,0,-1));
 
         long start = System.nanoTime();
@@ -83,14 +89,24 @@ public class Scene {
         File image = new File("RayTraced.png");
         buffer = new BufferedImage(vp.getHorizontalRes(), vp.getVerticalRes(), BufferedImage.TYPE_INT_RGB);
 
-        for(int i = 0; i < vp.getVerticalRes(); i++){
-            for(int j = 0; j < vp.getHorizontalRes(); j++) {
-                x = vp.getPixelSize() * (j - vp.getHorizontalRes() / 2 + 0.5);
-                y = vp.getPixelSize() * (i - vp.getVerticalRes() / 2 + 0.5);
-                ray.setOrigin(new Point3D(x, y, zw));
-                pixelColor = tracer.TraceRay(ray);
-                setPixel(i,j,pixelColor);
+        for(int i = 0; i < vp.getVerticalRes(); i++){          // UP
+            for(int j = 0; j < vp.getHorizontalRes(); j++) {    // ACROSS
+                pixelColor = new Color(0,0,0); //DEFAULT BACKGROUND COLOR
+
+
+                for(int row = 0; row < n; row++){
+                    for(int column = 0; column < n; column++){
+                        point.x = vp.getPixelSize() * (j - 0.5 * vp.getHorizontalRes() + (column + 0.5) / n );
+                        point.y = vp.getPixelSize() * (i - 0.5 * vp.getVerticalRes() + (row + 0.5) / n );
+                        ray.setOrigin(new Point3D(point.x, point.y, zw));
+                        pixelColor.add(tracer.TraceRay(ray));
+
+                    }
+                    pixelColor.divide(vp.getNumOfSamples());
+                    setPixel(i,j,pixelColor);
                 }
+
+            }
         }
         try{
             ImageIO.write(buffer, "PNG", image);
@@ -106,7 +122,7 @@ public class Scene {
 
     // set rgb value of current pixel in the buffered image
     public void setPixel(int row, int column, Color pixelColor){
-        buffer.setRGB(row,column,pixelColor.getRGB());
+        buffer.setRGB(row,column,pixelColor.toInt());
 
     }
 }

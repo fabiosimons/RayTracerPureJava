@@ -1,10 +1,10 @@
 package Tracer;
 
+import Utility.Color;
 import Utility.Ray;
 import Utility.RayHit;
 import World.Scene;
 
-import java.awt.*;
 
 public class ManyObjects extends RayTracer {
     RayHit r;

@@ -1,6 +1,7 @@
 package GeometricObjects;
 
 import Utility.*;
+import Utility.Color;
 
 import java.awt.*;
 
@@ -12,7 +13,7 @@ public class Plane extends Object {
     public Plane(Point3D point, Normal normal, Color color){
         this.point = new Point3D(point);
         this.normal = new Normal(normal);
-        this.color = new Color(color.getRGB());
+        this.color = new Color(color);
 
     }
 
