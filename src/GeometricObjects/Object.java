@@ -1,8 +1,10 @@
 package GeometricObjects;
 
-import Utility.Color;
+
 import Utility.Ray;
 import Utility.RayHit;
+
+import java.awt.*;
 
 public abstract class Object {
 
