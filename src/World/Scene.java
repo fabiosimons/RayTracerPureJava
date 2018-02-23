@@ -17,7 +17,6 @@ public class Scene {
     Color background_color;
     public Sphere sphere;
     public Sphere sphere2;
-    public Plane plane;
 
     RayTracer tracer;
     BufferedImage buffer;
