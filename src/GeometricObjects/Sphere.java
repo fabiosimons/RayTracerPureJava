@@ -12,12 +12,13 @@ public class Sphere extends Object {
         setRadius(radius);
         setColor(new Color(color.getRGB()));
     }
+
     @Override
     public boolean Hit(Ray ray) {
+        double t;
         double a = ray.getDirection().dot(ray.getDirection());
         double b = 2 * ray.getDirection().dot(ray.getOrigin().sub(getCenter()));
         double c = ray.getOrigin().sub(getCenter()).dot(ray.getOrigin().sub(getCenter())) - getRadius() * getRadius();
-        double t;
         double d = Math.pow(b,2) - 4 * a * c;
 
         if(d < 0.0){
@@ -54,4 +55,7 @@ public class Sphere extends Object {
     public Color getColor(){
         return this.color;
     }
+
+
+
 }

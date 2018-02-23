@@ -20,8 +20,7 @@ public class ManyObjects extends RayTracer {
             return r.getColor();
         }
         else{
-            return super.TraceRay(ray);
+            return s.background_color;
         }
-
     }
 }

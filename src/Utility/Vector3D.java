@@ -46,6 +46,14 @@ public class Vector3D {
         );
         return vector;
     }
+    public Normal multiplyAWithNormal(double a){
+        Normal normal = new Normal(
+                (a * this.getX()),
+                (a * this.getY()),
+                (a * this.getZ())
+        );
+        return normal;
+    }
 
     // DIVIDE WITH DOUBLE
     public Vector3D divideWithDouble(double a){

@@ -6,26 +6,39 @@ import java.awt.*;
 
 public class RayHit {
     private Color color;
-    private Point3D hitPoint;
+    public Point3D hitPoint;
+    public Normal normal;
     private Scene s;
     private boolean hit;
 
     public RayHit(Scene s){
         setHit(false);
+<<<<<<< HEAD
         setColor(new Color(0,0,0));
         setHitPoint();
+=======
+        setColor(new Color());
+        setNormal(new Normal());
+        setHitPoint(new Point3D());
+        setScene(s);
+>>>>>>> FixingSphere
     }
 
 
+    public void setNormal(Normal normal){
+        this.normal = normal;
+    }
     public void setHit(boolean hit) {
         this.hit = hit;
     }
-    public void setHitPoint(){
+    public void setHitPoint(Point3D hitpoint){
+        this.hitPoint = hitpoint;
     }
     public boolean Hit(){
         return this.hit;
     }
-    public void setScene(){
+    public void setScene(Scene s){
+        this.s = s;
     }
     public Color getColor(){
         return this.color;
