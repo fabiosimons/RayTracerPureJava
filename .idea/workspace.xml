@@ -4,27 +4,9 @@
     <list default="true" id="86814770-1ee6-4fcc-a50f-fb6547e2da17" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/Image.png" afterPath="$PROJECT_DIR$/Image.png" />
-      <change beforePath="$PROJECT_DIR$/out/production/RayTracerPureJava/GeometricObjects/Object.class" afterPath="$PROJECT_DIR$/out/production/RayTracerPureJava/GeometricObjects/Object.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/RayTracerPureJava/GeometricObjects/Plane.class" afterPath="$PROJECT_DIR$/out/production/RayTracerPureJava/GeometricObjects/Plane.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/RayTracerPureJava/GeometricObjects/Sphere.class" afterPath="$PROJECT_DIR$/out/production/RayTracerPureJava/GeometricObjects/Sphere.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/RayTracerPureJava/Tracer/ManyObjects.class" afterPath="$PROJECT_DIR$/out/production/RayTracerPureJava/Tracer/ManyObjects.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/RayTracerPureJava/Tracer/OneSphere.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/RayTracerPureJava/Tracer/RayTracer.class" afterPath="$PROJECT_DIR$/out/production/RayTracerPureJava/Tracer/RayTracer.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/RayTracerPureJava/Utility/Normal.class" afterPath="$PROJECT_DIR$/out/production/RayTracerPureJava/Utility/Normal.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/RayTracerPureJava/Utility/Point3D.class" afterPath="$PROJECT_DIR$/out/production/RayTracerPureJava/Utility/Point3D.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/RayTracerPureJava/Utility/RayHit.class" afterPath="$PROJECT_DIR$/out/production/RayTracerPureJava/Utility/RayHit.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/RayTracerPureJava/Utility/Vector3D.class" afterPath="$PROJECT_DIR$/out/production/RayTracerPureJava/Utility/Vector3D.class" />
       <change beforePath="$PROJECT_DIR$/out/production/RayTracerPureJava/World/Scene.class" afterPath="$PROJECT_DIR$/out/production/RayTracerPureJava/World/Scene.class" />
-      <change beforePath="$PROJECT_DIR$/src/GeometricObjects/Object.java" afterPath="$PROJECT_DIR$/src/GeometricObjects/Object.java" />
       <change beforePath="$PROJECT_DIR$/src/GeometricObjects/Plane.java" afterPath="$PROJECT_DIR$/src/GeometricObjects/Plane.java" />
       <change beforePath="$PROJECT_DIR$/src/GeometricObjects/Sphere.java" afterPath="$PROJECT_DIR$/src/GeometricObjects/Sphere.java" />
-      <change beforePath="$PROJECT_DIR$/src/Tracer/ManyObjects.java" afterPath="$PROJECT_DIR$/src/Tracer/ManyObjects.java" />
-      <change beforePath="$PROJECT_DIR$/src/Tracer/OneSphere.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/Tracer/RayTracer.java" afterPath="$PROJECT_DIR$/src/Tracer/RayTracer.java" />
-      <change beforePath="$PROJECT_DIR$/src/Utility/Normal.java" afterPath="$PROJECT_DIR$/src/Utility/Normal.java" />
-      <change beforePath="$PROJECT_DIR$/src/Utility/Point3D.java" afterPath="$PROJECT_DIR$/src/Utility/Point3D.java" />
-      <change beforePath="$PROJECT_DIR$/src/Utility/RayHit.java" afterPath="$PROJECT_DIR$/src/Utility/RayHit.java" />
-      <change beforePath="$PROJECT_DIR$/src/Utility/Vector3D.java" afterPath="$PROJECT_DIR$/src/Utility/Vector3D.java" />
       <change beforePath="$PROJECT_DIR$/src/World/Scene.java" afterPath="$PROJECT_DIR$/src/World/Scene.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -40,8 +22,8 @@
       <file leaf-file-name="Plane.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GeometricObjects/Plane.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+            <state relative-caret-position="391">
+              <caret line="23" column="20" lean-forward="false" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -51,7 +33,7 @@
         <entry file="file://$PROJECT_DIR$/src/GeometricObjects/Object.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="153">
-              <caret line="9" column="50" lean-forward="true" selection-start-line="9" selection-start-column="50" selection-end-line="9" selection-end-column="50" />
+              <caret line="9" column="67" lean-forward="true" selection-start-line="9" selection-start-column="39" selection-end-line="9" selection-end-column="67" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -125,8 +107,8 @@
       <file leaf-file-name="Scene.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/World/Scene.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="319">
-              <caret line="49" column="0" lean-forward="true" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+            <state relative-caret-position="442">
+              <caret line="62" column="8" lean-forward="false" selection-start-line="62" selection-start-column="8" selection-end-line="62" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#684#685#0" expanded="true" />
@@ -139,8 +121,8 @@
       <file leaf-file-name="Sphere.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GeometricObjects/Sphere.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="38" column="16" lean-forward="false" selection-start-line="38" selection-start-column="16" selection-end-line="38" selection-end-column="16" />
+            <state relative-caret-position="153">
+              <caret line="51" column="29" lean-forward="true" selection-start-line="51" selection-start-column="29" selection-end-line="51" selection-end-column="29" />
               <folding>
                 <element signature="method#Sphere#0;class#Sphere#0" expanded="false" />
                 <element signature="e#2246#2247#0" expanded="true" />
@@ -175,8 +157,8 @@
       <file leaf-file-name="ManyObjects.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Tracer/ManyObjects.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+            <state relative-caret-position="119">
+              <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#194#195#0" expanded="true" />
@@ -235,10 +217,10 @@
         <option value="$PROJECT_DIR$/src/Tracer/RayTracer.java" />
         <option value="$PROJECT_DIR$/src/Utility/RayHit.java" />
         <option value="$PROJECT_DIR$/src/Utility/Normal.java" />
-        <option value="$PROJECT_DIR$/src/GeometricObjects/Object.java" />
-        <option value="$PROJECT_DIR$/src/GeometricObjects/Sphere.java" />
         <option value="$PROJECT_DIR$/src/Tracer/ManyObjects.java" />
+        <option value="$PROJECT_DIR$/src/GeometricObjects/Object.java" />
         <option value="$PROJECT_DIR$/src/GeometricObjects/Plane.java" />
+        <option value="$PROJECT_DIR$/src/GeometricObjects/Sphere.java" />
         <option value="$PROJECT_DIR$/src/World/Scene.java" />
       </list>
     </option>
@@ -455,7 +437,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -465,7 +446,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1961824" sideWeight="0.50208336" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1961824" sideWeight="0.49791667" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1961824" sideWeight="0.49791667" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16861081" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -973,39 +954,17 @@
     <entry file="file://$PROJECT_DIR$/src/GeometricObjects/Object.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
-          <caret line="9" column="50" lean-forward="true" selection-start-line="9" selection-start-column="50" selection-end-line="9" selection-end-column="50" />
+          <caret line="9" column="67" lean-forward="true" selection-start-line="9" selection-start-column="39" selection-end-line="9" selection-end-column="67" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Tracer/RayTracer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Tracer/ManyObjects.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#194#195#0" expanded="true" />
-            <element signature="e#218#219#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GeometricObjects/Sphere.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="38" column="16" lean-forward="false" selection-start-line="38" selection-start-column="16" selection-end-line="38" selection-end-column="16" />
+        <state relative-caret-position="153">
+          <caret line="51" column="29" lean-forward="true" selection-start-line="51" selection-start-column="29" selection-end-line="51" selection-end-column="29" />
           <folding>
             <element signature="method#Sphere#0;class#Sphere#0" expanded="false" />
             <element signature="e#2246#2247#0" expanded="true" />
@@ -1026,16 +985,38 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GeometricObjects/Plane.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+        <state relative-caret-position="391">
+          <caret line="23" column="20" lean-forward="false" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Tracer/ManyObjects.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#194#195#0" expanded="true" />
+            <element signature="e#218#219#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Tracer/RayTracer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/World/Scene.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="49" column="0" lean-forward="true" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+        <state relative-caret-position="442">
+          <caret line="62" column="8" lean-forward="false" selection-start-line="62" selection-start-column="8" selection-end-line="62" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#684#685#0" expanded="true" />

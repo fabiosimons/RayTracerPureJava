@@ -21,7 +21,7 @@ public class Plane extends Object {
     public boolean Hit(Ray ray, double tmin, RayHit rayhit) {
         double t = point.sub(ray.getOrigin()).dot(normal)/ray.getDirection().dot(normal);
 
-        if(t > 10E-9) {
+        if(t > 10E-6) {
             tmin = t;
             rayhit.setNormal(normal);
             rayhit.setHitPoint(ray.getOrigin().add(ray.getDirection().multiplyAWithVector(t)));

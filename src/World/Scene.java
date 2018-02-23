@@ -39,10 +39,11 @@ public class Scene {
     public RayHit HitObjects(Ray ray){
         RayHit hit = new RayHit(this);
         double t = 0;
-        double tmin = 1000000000000000000000000.0;
+        double tmin = 10000.0;
+
 
         for(Object o : objects){
-            if (o.Hit(ray, t, hit) && (t < tmin))
+            if (o.Hit(ray, t, hit) && t < tmin)
                 hit.setHit(true);
                 tmin = t;
                 hit.setColor(new Color(o.color.getR(),o.color.getG(),o.color.getB()));
@@ -58,12 +59,12 @@ public class Scene {
         tracer = new ManyObjects(this);
 
         sphere = new Sphere(80, new Color(0.0f,0.0f,255.0f));
-        sphere.setCenter(new Point3D(0.0,0.0,0.0));
-       addObject(sphere);
+        sphere.setCenter(new Point3D(0.0,-100.0,0.0));
+        addObject(sphere);
 
-       // sphere2 = new Sphere(120, new Color(255.0f,255.0f,255.0f));
-      //  sphere2.setCenter(new Point3D(0.0,0.0,0.0));
-     //   addObject(sphere2);
+        sphere2 = new Sphere(120, new Color(255.0f,255.0f,255.0f));
+        sphere2.setCenter(new Point3D(0.0,0.0,0.0));
+        addObject(sphere2);
 
     //    plane = new Plane(new Point3D(0,0,0), new Normal(0,1,1), new Color(155.0f,155.0f,155.0f));
      //   addObject(plane);

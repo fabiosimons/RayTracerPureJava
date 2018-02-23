@@ -51,7 +51,7 @@ public class Sphere extends Object {
             double x = 2.0 * a;
             t = (-b - e) / x;
 
-            if(t > 10e-9){
+            if(t > 10e-6){
                 tmin = t;
                 rayhit.normal.equals(temp.add(ray.getDirection().multiplyAWithVector(t)));
                 rayhit.setHitPoint(ray.getOrigin().add(ray.getDirection().multiplyAWithVector(t)));
@@ -59,7 +59,7 @@ public class Sphere extends Object {
             }
             t = (-b + e) / x;
 
-            if(t > 10e-9){
+            if(t > 10e-6){
                 tmin = t;
                 rayhit.normal.equals(temp.add(ray.getDirection().multiplyAWithVector(t)));
                 rayhit.setHitPoint(ray.getOrigin().add(ray.getDirection().multiplyAWithVector(t)));
