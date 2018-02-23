@@ -10,7 +10,6 @@ public abstract class RayTracer {
     protected Scene s;
     private Color color;
 
-
     public RayTracer(){
         this.s = null;
     }

@@ -2,7 +2,6 @@ package GeometricObjects;
 
 
 import Utility.Ray;
-import Utility.RayHit;
 
 import java.awt.*;
 

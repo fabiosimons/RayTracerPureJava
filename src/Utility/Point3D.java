@@ -3,11 +3,6 @@ package Utility;
 public class Point3D {
     private double x,y,z;
 
-    public Point3D(){
-        setX(0.0);
-        setY(0.0);
-        setZ(0.0);
-    }
     public Point3D(double x, double y, double z){
         setX(x);
         setY(y);

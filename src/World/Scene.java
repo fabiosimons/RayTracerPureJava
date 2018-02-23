@@ -14,7 +14,7 @@ import java.util.ArrayList;
 
 public class Scene {
     ViewPlane vp;
-    public Color background_color;
+    Color background_color;
     public Sphere sphere;
     public Sphere sphere2;
     public Plane plane;
@@ -41,17 +41,17 @@ public class Scene {
         RayHit hit = new RayHit(this);
 
         for(Object o : objects){
-            if (o.Hit(ray))
+            if (o.Hit(ray)){
                 hit.setHit(true);
                 hit.setColor(new Color(o.color.getRGB()));
             }
+        }
         return hit;
     }
 
     // Initialse viewplane and objects in the scene
     public void build(){
         vp = new ViewPlane(800, 800, 1.0f);
-<<<<<<< HEAD
         background_color = new Color(0,0,0);
 
         sphere = new Sphere(100, new Color(255,255,0));
@@ -60,21 +60,7 @@ public class Scene {
 
         sphere2 = new Sphere(100, new Color(0,0,255));
         sphere2.setCenter(new Point3D(-50.0,0.0,0.0));
-=======
-        background_color = new Color(0.0f,0.0f,0.0f);
-        tracer = new ManyObjects(this);
-
-        sphere = new Sphere(80, new Color(0.0f,0.0f,1.0f));
-        sphere.setCenter(new Point3D(0.0,-100.0,0.0));
-        addObject(sphere);
-
-        sphere2 = new Sphere(120, new Color(0.0f,1.0f,1.0f));
-        sphere2.setCenter(new Point3D(0.0,0.0,0.0));
->>>>>>> FixingSphere
         addObject(sphere2);
-
-    //    plane = new Plane(new Point3D(0,0,0), new Normal(0,1,1), new Color(155.0f,155.0f,155.0f));
-     //   addObject(plane);
     }
 
     /*
@@ -90,7 +76,7 @@ public class Scene {
 
         double zw = 70;
         double x,y;
-
+        tracer = new ManyObjects(this);
         ray.setDirection(new Vector3D(0,0,-1));
 
         long start = System.nanoTime();
