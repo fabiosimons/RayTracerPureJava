@@ -18,13 +18,10 @@ public class Plane extends Object {
     }
 
     @Override
-    public boolean Hit(Ray ray, double tmin, RayHit rayhit) {
+    public boolean Hit(Ray ray) {
         double t = point.sub(ray.getOrigin()).dot(normal)/ray.getDirection().dot(normal);
 
         if(t > 10E-6) {
-            tmin = t;
-            rayhit.setNormal(normal);
-            rayhit.setHitPoint(ray.getOrigin().add(ray.getDirection().multiplyAWithVector(t)));
             return true;
         }else{
             return false;
