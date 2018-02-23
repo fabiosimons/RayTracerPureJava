@@ -1,7 +1,5 @@
 package GeometricObjects;
 
-
-import java.awt.*;
 import Utility.*;
 
 public class Sphere extends Object {
@@ -10,7 +8,7 @@ public class Sphere extends Object {
 
     public Sphere(double radius, Color color){
         setRadius(radius);
-        setColor(new Color(color.getRGB()));
+        setColor(new Color(color));
     }
 
     @Override

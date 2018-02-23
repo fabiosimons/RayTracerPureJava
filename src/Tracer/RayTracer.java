@@ -1,10 +1,8 @@
 package Tracer;
 
-
+import Utility.Color;
 import Utility.Ray;
 import World.Scene;
-
-import java.awt.*;
 
 public abstract class RayTracer {
     protected Scene s;

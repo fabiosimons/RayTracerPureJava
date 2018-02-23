@@ -1,10 +1,8 @@
 package Tracer;
 
-
+import Utility.Color;
 import Utility.Ray;
 import World.Scene;
-
-import java.awt.*;
 
 public class OneSphere extends RayTracer {
 
