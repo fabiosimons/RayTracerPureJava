@@ -16,7 +16,9 @@ public class Plane extends Object {
         this.color = new Color(color);
 
     }
-
+    public Color getColor(){
+        return this.color;
+    }
     @Override
     public boolean Hit(Ray ray) {
         double t = point.sub(ray.getOrigin()).dot(normal)/ray.getDirection().dot(normal);

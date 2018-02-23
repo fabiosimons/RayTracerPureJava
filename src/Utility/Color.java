@@ -29,7 +29,7 @@ public class Color {
         b /= divide;
     }
     public int toInt(){
-        return (65536 * (int)getR() + 256 * (int)getG() + (int)getB());
+        return (int)(r*255)<<16|(int)(g*255)<<8|(int)(b*255);
     }
 
     public void setR(float r) {

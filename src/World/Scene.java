@@ -55,18 +55,18 @@ public class Scene {
         vp.setNumOfSamples(64);
         background_color = new Color(0,0,0);
 
-        sphere = new Sphere(100, new Color(255.0f,155.0f,0.0f));
+        sphere = new Sphere(100, new Color(255.0f,255.0f,0.0f));
         sphere.setCenter(new Point3D(100.0,0.0,0.0));
         addObject(sphere);
 
-        sphere2 = new Sphere(100, new Color(0.0f,0.0f,255.0f));
+        sphere2 = new Sphere(100, new Color(0.0f,155.0f,255.0f));
         sphere2.setCenter(new Point3D(-50.0,0.0,0.0));
         addObject(sphere2);
     }
 
     /*
     Renders the scene
-    creates new file and buffered
+    creates new file and buffered image
     initialises ray and loops through each pixel in the viewplane firing rays from the origin
     sets rgb values for each pixel in buffered image
     Calculates the time it takes to create the ray traced image and prints
@@ -76,8 +76,8 @@ public class Scene {
         Ray ray = new Ray();
 
         double zw = 70;
-        double x,y;
-        tracer = new OneSphere(this);
+
+        tracer = new ManyObjects(this);
 
         int n = (int)Math.sqrt((float)vp.numOfSamples);
         Point2D point = new Point2D();
@@ -91,7 +91,7 @@ public class Scene {
 
         for(int i = 0; i < vp.getVerticalRes(); i++){          // UP
             for(int j = 0; j < vp.getHorizontalRes(); j++) {    // ACROSS
-                pixelColor = new Color(0,0,0); //DEFAULT BACKGROUND COLOR
+                pixelColor = background_color; //DEFAULT BACKGROUND COLOR
 
 
                 for(int row = 0; row < n; row++){
