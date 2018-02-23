@@ -2,6 +2,8 @@ package Utility;
 
 import World.Scene;
 
+import java.awt.*;
+
 public class RayHit {
     private Color color;
     private Point3D hitPoint;
@@ -10,7 +12,7 @@ public class RayHit {
 
     public RayHit(Scene s){
         setHit(false);
-        setColor(new Color());
+        setColor(new Color(0,0,0));
         setHitPoint();
     }
 

@@ -4,10 +4,10 @@ import GeometricObjects.Object;
 import GeometricObjects.Plane;
 import GeometricObjects.Sphere;
 import Tracer.ManyObjects;
-import Tracer.OneSphere;
 import Tracer.RayTracer;
 import Utility.*;
 import javax.imageio.ImageIO;
+import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.util.ArrayList;
@@ -43,7 +43,7 @@ public class Scene {
         for(Object o : objects){
             if (o.Hit(ray)){
                 hit.setHit(true);
-                hit.setColor(new Color(o.color.getR(),o.color.getG(),o.color.getB()));
+                hit.setColor(new Color(o.color.getRGB()));
             }
         }
         return hit;
@@ -52,13 +52,13 @@ public class Scene {
     // Initialse viewplane and objects in the scene
     public void build(){
         vp = new ViewPlane(800, 800, 1.0f);
-        background_color = new Color();
+        background_color = new Color(0,0,0);
 
-        sphere = new Sphere(100, new Color(1.0f,0.0f,0.0f));
+        sphere = new Sphere(100, new Color(255,255,0));
         sphere.setCenter(new Point3D(100.0,0.0,0.0));
         addObject(sphere);
 
-        sphere2 = new Sphere(100, new Color(0.0f,0.0f,155.0f));
+        sphere2 = new Sphere(100, new Color(0,0,255));
         sphere2.setCenter(new Point3D(-50.0,0.0,0.0));
         addObject(sphere2);
     }
@@ -81,13 +81,13 @@ public class Scene {
 
         long start = System.nanoTime();
 
-        File image = new File("Image.png");
+        File image = new File("RayTraced.png");
         buffer = new BufferedImage(vp.getHorizontalRes(), vp.getVerticalRes(), BufferedImage.TYPE_INT_RGB);
 
         for(int i = 0; i < vp.getVerticalRes(); i++){
             for(int j = 0; j < vp.getHorizontalRes(); j++) {
-                x = vp.getPixelSize() * (j - 0.5 * (vp.getHorizontalRes() - 1.0));
-                y = vp.getPixelSize() * (i - 0.5 * (vp.getVerticalRes() - 1.0));
+                x = vp.getPixelSize() * (j - vp.getHorizontalRes() / 2 + 0.5);
+                y = vp.getPixelSize() * (i - vp.getVerticalRes() / 2 + 0.5);
                 ray.setOrigin(new Point3D(x, y, zw));
                 pixelColor = tracer.TraceRay(ray);
                 setPixel(i,j,pixelColor);
@@ -107,7 +107,7 @@ public class Scene {
 
     // set rgb value of current pixel in the buffered image
     public void setPixel(int row, int column, Color pixelColor){
-        buffer.setRGB(row,column,pixelColor.toInteger());
+        buffer.setRGB(row,column,pixelColor.getRGB());
 
     }
 }
