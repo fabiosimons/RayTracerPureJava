@@ -4,7 +4,6 @@ import GeometricObjects.Object;
 import GeometricObjects.Plane;
 import GeometricObjects.Sphere;
 import Tracer.ManyObjects;
-import Tracer.OneSphere;
 import Tracer.RayTracer;
 import Utility.*;
 import javax.imageio.ImageIO;
@@ -14,7 +13,7 @@ import java.util.ArrayList;
 
 public class Scene {
     ViewPlane vp;
-    Color background_color;
+    public Color background_color;
     public Sphere sphere;
     public Sphere sphere2;
     public Plane plane;
@@ -39,28 +38,35 @@ public class Scene {
      */
     public RayHit HitObjects(Ray ray){
         RayHit hit = new RayHit(this);
+        double t = 0;
+        double tmin = 1000000000000000000000000.0;
 
         for(Object o : objects){
-            if (o.Hit(ray)){
+            if (o.Hit(ray, t, hit) && (t < tmin))
                 hit.setHit(true);
+                tmin = t;
                 hit.setColor(new Color(o.color.getR(),o.color.getG(),o.color.getB()));
             }
-        }
+
         return hit;
     }
 
     // Initialse viewplane and objects in the scene
     public void build(){
         vp = new ViewPlane(800, 800, 1.0f);
-        background_color = new Color();
+        background_color = new Color(0.0f,0.0f,0.0f);
+        tracer = new ManyObjects(this);
 
-        sphere = new Sphere(100, new Color(1.0f,0.0f,0.0f));
-        sphere.setCenter(new Point3D(100.0,0.0,0.0));
-        addObject(sphere);
+        sphere = new Sphere(80, new Color(0.0f,0.0f,255.0f));
+        sphere.setCenter(new Point3D(0.0,0.0,0.0));
+       addObject(sphere);
 
-        sphere2 = new Sphere(100, new Color(0.0f,0.0f,155.0f));
-        sphere2.setCenter(new Point3D(-50.0,0.0,0.0));
-        addObject(sphere2);
+       // sphere2 = new Sphere(120, new Color(255.0f,255.0f,255.0f));
+      //  sphere2.setCenter(new Point3D(0.0,0.0,0.0));
+     //   addObject(sphere2);
+
+    //    plane = new Plane(new Point3D(0,0,0), new Normal(0,1,1), new Color(155.0f,155.0f,155.0f));
+     //   addObject(plane);
     }
 
     /*
@@ -76,7 +82,7 @@ public class Scene {
 
         double zw = 70;
         double x,y;
-        tracer = new ManyObjects(this);
+
         ray.setDirection(new Vector3D(0,0,-1));
 
         long start = System.nanoTime();

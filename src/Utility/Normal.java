@@ -51,6 +51,11 @@ public class Normal {
         return normal;
 
     }
+    public void equals(Vector3D v){
+        setX(v.getX());
+        setY(v.getY());
+        setZ(v.getZ());
+    }
 
     //add normal
     public Normal add(Normal n){
