@@ -55,11 +55,11 @@ public class Scene {
         vp.setNumOfSamples(64);
         background_color = new Color(0,0,0);
 
-        sphere = new Sphere(100, new Color(255.0f,255.0f,0.0f));
-        sphere.setCenter(new Point3D(100.0,0.0,0.0));
+        sphere = new Sphere(100, new Color(255.0f,0.0f,0.0f));
+        sphere.setCenter(new Point3D(100.0,200.0,0.0));
         addObject(sphere);
 
-        sphere2 = new Sphere(100, new Color(0.0f,155.0f,255.0f));
+        sphere2 = new Sphere(100, new Color(0.0f,255.0f,0.0f));
         sphere2.setCenter(new Point3D(-50.0,0.0,0.0));
         addObject(sphere2);
     }
@@ -72,40 +72,33 @@ public class Scene {
     Calculates the time it takes to create the ray traced image and prints
      */
     public void render(){
-        Color pixelColor;
-        Ray ray = new Ray();
-
+        //Color pixelColor;
+        Ray ray;
         double zw = 70;
-
         tracer = new ManyObjects(this);
-
         int n = (int)Math.sqrt((float)vp.numOfSamples);
         Point2D point = new Point2D();
-
-        ray.setDirection(new Vector3D(0,0,-1));
 
         long start = System.nanoTime();
 
         File image = new File("RayTraced.png");
         buffer = new BufferedImage(vp.getHorizontalRes(), vp.getVerticalRes(), BufferedImage.TYPE_INT_RGB);
 
-        for(int i = 0; i < vp.getVerticalRes(); i++){          // UP
+        for(int i = 0; i < vp.getVerticalRes(); i++)    {     // UP
             for(int j = 0; j < vp.getHorizontalRes(); j++) {    // ACROSS
-                pixelColor = background_color; //DEFAULT BACKGROUND COLOR
+                Color pixelColor = new Color(); //DEFAULT BACKGROUND COLOR
 
+                for (int row = 0; row < n; row++) {
+                    for (int column = 0; column < n; column++) {
+                        point.x = vp.getPixelSize() * (j - 0.5 * vp.getHorizontalRes() + (column + 0.5) / n);
+                        point.y = vp.getPixelSize() * (i - 0.5 * vp.getVerticalRes() + (row + 0.5) / n);
 
-                for(int row = 0; row < n; row++){
-                    for(int column = 0; column < n; column++){
-                        point.x = vp.getPixelSize() * (j - 0.5 * vp.getHorizontalRes() + (column + 0.5) / n );
-                        point.y = vp.getPixelSize() * (i - 0.5 * vp.getVerticalRes() + (row + 0.5) / n );
-                        ray.setOrigin(new Point3D(point.x, point.y, zw));
+                        ray = new Ray(new Point3D(point.x, point.y, zw), new Vector3D(0,0,-1));
                         pixelColor.add(tracer.TraceRay(ray));
-
                     }
-                    pixelColor.divide(vp.getNumOfSamples());
-                    setPixel(i,j,pixelColor);
                 }
-
+                pixelColor.divide(vp.getNumOfSamples());
+                setPixel(i, j, pixelColor);
             }
         }
         try{
@@ -123,6 +116,5 @@ public class Scene {
     // set rgb value of current pixel in the buffered image
     public void setPixel(int row, int column, Color pixelColor){
         buffer.setRGB(row,column,pixelColor.toInt());
-
     }
 }

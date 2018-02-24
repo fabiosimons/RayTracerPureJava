@@ -19,29 +19,32 @@ public class Color {
         setB(color.b);
     }
     public void add(Color color){
-        r += color.r;
-        g += color.g;
-        b += color.b;
+        this.r += color.getR();
+        this.g += color.getG();
+        this.b += color.getB();
     }
     public void divide(int divide){
-        r /= divide;
-        g /= divide;
-        b /= divide;
+        this.r /= divide;
+        this.g /= divide;
+        this.b /= divide;
     }
     public int toInt(){
-        return (int)(r*255)<<16|(int)(g*255)<<8|(int)(b*255);
+        int rgb = (int)getR();
+        rgb = (rgb << 8) + (int)getG();
+        rgb = (rgb << 8) + (int)getB();
+        return rgb;
     }
 
     public void setR(float r) {
         this.r = r;
     }
 
-    public void setB(float b) {
-        this.b = b;
-    }
-
     public void setG(float g) {
         this.g = g;
+    }
+
+    public void setB(float b) {
+        this.b = b;
     }
 
     public float getR(){
