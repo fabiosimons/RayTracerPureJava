@@ -2,32 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="86814770-1ee6-4fcc-a50f-fb6547e2da17" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/Tracer/Main.java" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/RayTraced.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/RayTracerPureJava/GeometricObjects/Object.class" afterPath="$PROJECT_DIR$/out/production/RayTracerPureJava/GeometricObjects/Object.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/RayTracerPureJava/GeometricObjects/Plane.class" afterPath="$PROJECT_DIR$/out/production/RayTracerPureJava/GeometricObjects/Plane.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/RayTracerPureJava/GeometricObjects/Sphere.class" afterPath="$PROJECT_DIR$/out/production/RayTracerPureJava/GeometricObjects/Sphere.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/RayTracerPureJava/Main.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/RayTracerPureJava/Tracer/ManyObjects.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/RayTracerPureJava/Tracer/OneSphere.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/RayTracerPureJava/Tracer/RayTracer.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/RayTracerPureJava/Utility/Normal.class" afterPath="$PROJECT_DIR$/out/production/RayTracerPureJava/Utility/Normal.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/RayTracerPureJava/Utility/RayHit.class" afterPath="$PROJECT_DIR$/out/production/RayTracerPureJava/Utility/RayHit.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/RayTracerPureJava/Utility/Vector3D.class" afterPath="$PROJECT_DIR$/out/production/RayTracerPureJava/Utility/Vector3D.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/RayTracerPureJava/World/Scene.class" afterPath="$PROJECT_DIR$/out/production/RayTracerPureJava/World/Scene.class" />
-      <change beforePath="$PROJECT_DIR$/src/GeometricObjects/Object.java" afterPath="$PROJECT_DIR$/src/GeometricObjects/Object.java" />
-      <change beforePath="$PROJECT_DIR$/src/GeometricObjects/Plane.java" afterPath="$PROJECT_DIR$/src/GeometricObjects/Plane.java" />
-      <change beforePath="$PROJECT_DIR$/src/GeometricObjects/Sphere.java" afterPath="$PROJECT_DIR$/src/GeometricObjects/Sphere.java" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/Tracer/ManyObjects.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/Tracer/OneSphere.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/Tracer/RayTracer.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/Utility/Normal.java" afterPath="$PROJECT_DIR$/src/Utility/Normal.java" />
-      <change beforePath="$PROJECT_DIR$/src/Utility/RayHit.java" afterPath="$PROJECT_DIR$/src/Utility/RayHit.java" />
-      <change beforePath="$PROJECT_DIR$/src/Utility/Vector3D.java" afterPath="$PROJECT_DIR$/src/Utility/Vector3D.java" />
-      <change beforePath="$PROJECT_DIR$/src/World/Scene.java" afterPath="$PROJECT_DIR$/src/World/Scene.java" />
-      <change beforePath="$PROJECT_DIR$/src/World/ViewPlane.java" afterPath="$PROJECT_DIR$/src/World/ViewPlane.java" />
+      <change beforePath="$PROJECT_DIR$/out/production/RayTracerPureJava/World/ViewPlane.class" afterPath="$PROJECT_DIR$/out/production/RayTracerPureJava/World/ViewPlane.class" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -441,6 +416,14 @@
       <option name="presentableId" value="Default" />
       <updated>1517829604862</updated>
     </task>
+    <task id="LOCAL-00001" summary="Clean up and Mass Change">
+      <created>1522585596537</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1522585596537</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -476,6 +459,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Clean up and Mass Change" />
+    <option name="LAST_COMMIT_MESSAGE" value="Clean up and Mass Change" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
