@@ -15,6 +15,11 @@ public class Vector3D {
         setY(point.getY());
         setZ(point.getZ());
     }
+    public Vector3D(Vector3D vector){
+        setX(vector.getX());
+        setY(vector.getY());
+        setZ(vector.getZ());
+    }
 
     // ADD TWO VECTORS
     public Vector3D add(Vector3D v){
@@ -36,6 +41,14 @@ public class Vector3D {
             );
             return vector;
         }
+    public Vector3D sub(Point3D p){
+        Vector3D vector = new Vector3D(
+                (this.getX()- p.getX()),
+                (this.getY() - p.getY()),
+                (this.getZ() - p.getZ())
+        );
+        return vector;
+    }
 
     // MULTIPLICATION OF A VECTOR AND A DOUBLE
     public Vector3D multiplyAWithVector(double a){
@@ -107,6 +120,13 @@ public class Vector3D {
 
         return vector;
 
+    }
+    public Vector3D normalise(){
+        double length = Math.sqrt(  Math.pow(getX(),2) +
+                                    Math.pow(getY(),2) +
+                                    Math.pow(getZ(),2));
+
+        return new Vector3D(getX() / length, getY()/length, getZ()/length);
     }
 // SETTERS AND GETTERS
     public double getX(){

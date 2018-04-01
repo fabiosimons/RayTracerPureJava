@@ -4,27 +4,26 @@ import World.Scene;
 
 
 public class RayHit {
-    private Color color;
-    private Point3D hitPoint;
-    private Scene s;
-    private boolean hit;
+    public Color color;
+    public Point3D hitPoint;
+    public Scene s;
+    public Normal normal;
+    public boolean hit;
 
-    public RayHit(Scene s){
+    public RayHit(){
         setHit(false);
         setColor(new Color(0.0f,0.0f,0.0f));
-        setHitPoint();
     }
 
 
     public void setHit(boolean hit) {
         this.hit = hit;
     }
-    public void setHitPoint(){
-    }
     public boolean Hit(){
         return this.hit;
     }
-    public void setScene(){
+    public void setScene(Scene s){
+        this.s = s;
     }
     public Color getColor(){
         return this.color;

@@ -12,7 +12,6 @@ public class ViewPlane {
         setVerticalRes(vertical);
         setPixelSize(pixelSize);
     }
-    public void setNumOfSamples(int numOfSamples){this.numOfSamples = numOfSamples;}
     public void setHorizontalRes(int horizontalRes){
         this.horizontalRes = horizontalRes;
     }
@@ -22,7 +21,6 @@ public class ViewPlane {
     public void setPixelSize(float pixelSize){
         this.pixelSize = pixelSize;
     }
-    public int getNumOfSamples(){return this.numOfSamples;}
     public int getHorizontalRes(){
         return this.horizontalRes;
     }

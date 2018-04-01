@@ -20,13 +20,13 @@ public class Plane extends Object {
         return this.color;
     }
     @Override
-    public boolean Hit(Ray ray) {
-        double t = point.sub(ray.getOrigin()).dot(normal)/ray.getDirection().dot(normal);
+    public double Hit(Ray ray) {
+        double t = point.sub(ray.getOrigin()).dot(normal) / ray.getDirection().dot(normal);
 
-        if(t > 10E-9) {
-            return true;
-        }else{
-            return false;
+        if (t > 10E-9) {
+            return t;
+        } else {
+            return 0.0;
         }
     }
 }

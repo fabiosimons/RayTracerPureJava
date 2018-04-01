@@ -1,5 +1,7 @@
 package Utility;
 
+import java.util.Vector;
+
 public class Normal {
     public double x, y, z;
 
@@ -17,6 +19,11 @@ public class Normal {
         setX(normal.getX());
         setY(normal.getY());
         setZ(normal.getZ());
+    }
+    public Normal(Vector3D vector){
+        setX(vector.getX());
+        setY(vector.getY());
+        setZ(vector.getZ());
     }
 
     // DOT PRODUCT
