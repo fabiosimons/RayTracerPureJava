@@ -33,11 +33,8 @@ public class RenderInRealTime extends JFrame {
     public void paint(Graphics g){
         g.drawImage(image,0,0,canvas);
         repaint();
-
     }
     public void setPixel(BufferedImage image){
         this.image = image;
-
-
     }
 }

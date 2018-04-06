@@ -51,7 +51,6 @@ public class Sphere extends Object {
                     return t;
                 }
             }
-
             return 0.0;
         }
 

@@ -17,11 +17,6 @@ public class Lambertian extends BRDF {
     public Color Distribution() {
         return new Color(colour.multiplyWithDouble(coefficient * 1 / Math.PI));
     }
-    //NOT USED IN THIS CLASS
-    @Override
-    public Color ReflectionColour(RayHit rayHit, Vector3D incomingRay, Vector3D outgoingRay) {
-        return new Color();
-    }
     @Override
     public Color rho() {
         return new Color(colour.multiplyWithDouble(coefficient));

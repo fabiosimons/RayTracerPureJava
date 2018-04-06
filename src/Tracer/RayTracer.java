@@ -38,7 +38,6 @@ public class RayTracer {
         }
         pixelColour.divide(Sampler.getNumOfSamples());
         pixelColour = checkBoundary(pixelColour);
-
         return pixelColour;
     }
 
@@ -49,7 +48,6 @@ public class RayTracer {
             pixelColour.setG(255.0f);
         if(pixelColour.getB() > 255.0)
             pixelColour.setB(255.0f);
-
         return pixelColour;
     }
 }
