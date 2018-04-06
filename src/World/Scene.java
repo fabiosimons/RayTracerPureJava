@@ -1,5 +1,6 @@
 package World;
 
+import Engine.RenderInRealTime;
 import GeometricObjects.Object;
 import GeometricObjects.Plane;
 import GeometricObjects.Sphere;
@@ -9,6 +10,7 @@ import Engine.Main;
 import Utility.*;
 import Utility.Color;
 
+import java.awt.*;
 import java.util.ArrayList;
 
 
@@ -19,12 +21,17 @@ public class Scene {
     private Plane plane;
     public AmbientLight ambient;
     private Matte matte;
+    public PointLight light;
     private static ArrayList<Object> objects;
     public static ArrayList<Light> lights;
+    public static RenderInRealTime r;
 
     // DEFAULT CONSTRUCTOR
     public Scene(int width, int height, float pixelSize){
         vp = new ViewPlane(width, height, pixelSize);
+
+        r = new RenderInRealTime(width, height);
+
         objects = new ArrayList<>();
         lights = new ArrayList<>();
 
@@ -37,7 +44,7 @@ public class Scene {
         ambient.color = new Color(255.0f,255.0f,255.0f);
         addLight(ambient);
 
-        PointLight light = new PointLight();
+        light = new PointLight();
         light.location = (new Vector3D(100,50,150));
         light.ls = 3;
         light.color = new Color(255.0f,255.0f,255.0f);
@@ -70,10 +77,7 @@ public class Scene {
         matte.setColour(new Color(200.0f,150.0f,125.0f));
         plane = new Plane(new Point3D(0.0,0.0,0.0), new Normal(0.0,1.0,0.2));
         plane.material = matte;
-
         addObject(plane);
-
-
     }
     // ADD OBJECTS TO SCENE (arraylist)
     public void addObject(Object object){

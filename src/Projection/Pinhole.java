@@ -1,13 +1,16 @@
 package Projection;
 
+import Engine.RenderInRealTime;
 import Sampling.JitteredSampling;
 import Sampling.Sampler;
 import Tracer.RayTracer;
 import Utility.*;
+import Utility.Color;
 import World.Scene;
 import World.ViewPlane;
 
 import javax.imageio.ImageIO;
+import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
 
@@ -15,6 +18,8 @@ import java.io.File;
  * PERSPECTIVE RAY TRACING
  */
 public class Pinhole extends Camera {
+
+    RenderInRealTime r = Scene.r;
 
     public Pinhole(Point3D eye, Point3D lookat, double FOV){
         this.eye = new Point3D(eye);
@@ -34,6 +39,7 @@ public class Pinhole extends Camera {
             for(int width = 0; width < Scene.vp.getHorizontalRes(); width++){
                 pixelColour = tracer.BasicTracer(width,height);
                 buffer.setRGB(width,Scene.vp.getVerticalRes()-height-1,pixelColour.toInt());
+                r.setPixel(buffer);
             }
         }
         try {
