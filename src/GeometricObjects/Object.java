@@ -1,6 +1,7 @@
 package GeometricObjects;
 
 
+import Material.Material;
 import Utility.Color;
 import Utility.Ray;
 import Utility.RayHit;
@@ -9,6 +10,6 @@ import Utility.RayHit;
 public abstract class Object {
 
     public Color color;
-    public double tmin;
-    public abstract double Hit(Ray ray);
+    public Material material;
+    public abstract double Hit(Ray ray, RayHit rayhit);
 }

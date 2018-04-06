@@ -86,7 +86,15 @@ public class Normal {
         );
         return normal;
     }
+    public void normalise(){
+        double length = Math.sqrt(  Math.pow(getX(),2) +
+                Math.pow(getY(),2) +
+                Math.pow(getZ(),2));
 
+        setX(getX()/length);
+        setY(getY()/length);
+        setZ(getZ()/length);
+    }
     //
 
     // SETTERS AND GETTERS

@@ -3,6 +3,7 @@ package GeometricObjects;
 
 import Utility.*;
 import Utility.Color;
+import Material.*;
 
 public class Sphere extends Object {
     private double radius;
@@ -11,39 +12,48 @@ public class Sphere extends Object {
     public Sphere(){
 
     }
-    public Sphere(double radius, Color color){
+    public Sphere(double radius, Material material){
         setRadius(radius);
-        setColor(color);
+        setMaterial(material);
     }
-    public Sphere(Point3D center, double radius, Color color){
+    public Sphere(Point3D center, double radius){
         setRadius(radius);
-        setColor(color);
         setCenter(center);
     }
 
     @Override
-    public double Hit(Ray ray) {
+    public double Hit(Ray ray, RayHit rayhit) {
         double a = ray.getDirection().dot(ray.getDirection());
-        double b = 2 * ray.getDirection().dot(ray.getOrigin().sub(getCenter()));
+        double b = 2 * ray.getOrigin().sub(getCenter()).dot(ray.getDirection());
         double c = ray.getOrigin().sub(getCenter()).dot(ray.getOrigin().sub(getCenter())) - getRadius() * getRadius();
         double t;
-        double d = Math.pow(b, 2) - 4 * a * c;
+        double d = b * b - 4 * a * c;
 
         if (d < 0.0) {
             return 0.0;
         } else {
-            t = (-b - (Math.sqrt(d)) / (2.0 * a));
+            t = (-b - Math.sqrt(d)) / (2.0 * a);
             if (t > 10e-9) {
+
+                Vector3D x = new Vector3D(ray.getOrigin().sub(getCenter()));
+                Vector3D y = new Vector3D(ray.getDirection().multiplyAWithVector(t));
+                rayhit.normal = new Normal(x.add(y).divideWithDouble(getRadius()));
+                rayhit.LocalHitPoint = ray.getOrigin().add(ray.getDirection().multiplyAWithVector(t));
                 return t;
-            } else {
-                //t = (-b + (Math.sqrt(d)) / ( 2.0 * a));
-                // if(t > 10e-9){
-                //     return t;
-                // }
-                return 0.0;
             }
+                t = (-b - Math.sqrt(d)) / (2.0 * a);
+                if (t > 10e-9) {
+
+                    Vector3D x = new Vector3D(ray.getOrigin().sub(getCenter()));
+                    Vector3D y = new Vector3D(ray.getDirection().multiplyAWithVector(t));
+                    rayhit.normal = new Normal(x.add(y).divideWithDouble(getRadius()));
+                    rayhit.LocalHitPoint = ray.getOrigin().add(ray.getDirection().multiplyAWithVector(t));
+                    return t;
+                }
+            }
+
+            return 0.0;
         }
-    }
 
     public void setCenter(Point3D center){
         this.center = center;
@@ -62,5 +72,12 @@ public class Sphere extends Object {
     }
     public Color getColor(){
         return this.color;
+    }
+
+    public void setMaterial(Material material) {
+        this.material = material;
+    }
+    public Material getMaterial(){
+        return material;
     }
 }

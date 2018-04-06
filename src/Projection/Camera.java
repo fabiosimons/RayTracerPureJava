@@ -8,16 +8,19 @@ import Utility.Vector3D;
 public abstract class Camera {
     protected Point3D eye;
     protected Point3D lookat;
-    protected Vector3D up = new Vector3D(0.0001234,1.0,0.01355);
+    protected Vector3D up = new Vector3D(0.00424,1.0,0.00764);
     protected Vector3D u,v,w;
     protected double distance;
 
     public void computeUVW(){
-        w = eye.sub(lookat);
+
+        w = new Vector3D(eye.sub(lookat));   // eye to lookout
         w.normalise();
-        u = up.cross(w);
+
+        u = new Vector3D(up.cross(w));     // y direction
         u.normalise();
-        v = w.cross(u);
+
+        v = new Vector3D(w.cross(u));
     }
     public abstract void render();
     public abstract Ray CreateRay(Point2D p);

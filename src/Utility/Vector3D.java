@@ -41,6 +41,7 @@ public class Vector3D {
             );
             return vector;
         }
+
     public Vector3D sub(Point3D p){
         Vector3D vector = new Vector3D(
                 (this.getX()- p.getX()),
@@ -121,12 +122,17 @@ public class Vector3D {
         return vector;
 
     }
-    public Vector3D normalise(){
+    public void normalise(){
         double length = Math.sqrt(  Math.pow(getX(),2) +
                                     Math.pow(getY(),2) +
                                     Math.pow(getZ(),2));
 
-        return new Vector3D(getX() / length, getY()/length, getZ()/length);
+        setX(getX()/length);
+        setY(getY()/length);
+        setZ(getZ()/length);
+    }
+    public String toString(){
+        return "X : " + getX() + " Y : " + getY()+ " Z: " + getZ();
     }
 // SETTERS AND GETTERS
     public double getX(){

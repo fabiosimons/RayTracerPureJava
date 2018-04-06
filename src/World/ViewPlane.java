@@ -4,8 +4,6 @@ public class ViewPlane {
     public int horizontalRes;   // HORIZONTAL IMAGE RESOLUTION
     public int verticalRes;   // VERTICAL IMAGE RESOLUTION
     public float pixelSize;  // size of pixel
-    public int numOfSamples;
-    public float gamma;
 
     public ViewPlane(int horizontal, int vertical, float pixelSize){
         setHorizontalRes(horizontal);

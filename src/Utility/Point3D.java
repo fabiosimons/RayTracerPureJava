@@ -1,5 +1,7 @@
 package Utility;
 
+import java.awt.*;
+
 public class Point3D {
     private double x,y,z;
 
@@ -12,6 +14,11 @@ public class Point3D {
         setX(point.getX());
         setY(point.getY());
         setZ(point.getZ());
+    }
+    public Point3D(){
+        setX(0.0);
+        setY(0.0);
+        setY(0.0);
     }
 
     //DOT PRODUCT
@@ -49,13 +56,13 @@ public class Point3D {
         );
         return point;
     }
-    public Vector3D sub(Point3D p){
-        Vector3D vector = new Vector3D(
+    public Point3D sub(Point3D p){
+        Point3D point = new Point3D(
                 (this.getX()- p.getX()),
                 (this.getY() - p.getY()),
                 (this.getZ() - p.getZ())
         );
-        return vector;
+        return point;
     }
 
     //ADD
@@ -64,6 +71,14 @@ public class Point3D {
                 (this.getX() + v.getX()),
                 (this.getY() + v.getY()),
                 (this.getZ() + v.getZ())
+        );
+        return point;
+    }
+    public Point3D add(Point3D p){
+        Point3D point = new Point3D(
+                (this.getX() + p.getX()),
+                (this.getY() + p.getY()),
+                (this.getZ() + p.getZ())
         );
         return point;
     }

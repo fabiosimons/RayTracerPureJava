@@ -1,8 +1,6 @@
 package Sampling;
 
-import Utility.Color;
 import Utility.Point2D;
-import Utility.Point3D;
 
 import java.util.ArrayList;
 

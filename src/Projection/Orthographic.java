@@ -17,12 +17,10 @@ public class Orthographic extends Camera {
         RayTracer tracer = new RayTracer();
         Color pixelColour;
 
-        for (int i = 0; i < Scene.vp.getVerticalRes(); i++) {
-            for (int j = 0; j < Scene.vp.getHorizontalRes(); j++) {
-                //System.out.println("tracing: " + i);
-                pixelColour = tracer.traceRay(i,j);
-                pixelColour.divide(Sampler.getNumOfSamples());
-                buffer.setRGB(i,Scene.vp.getVerticalRes() - j - 1 ,pixelColour.toInt());
+        for (int j = 0; j < Scene.vp.getVerticalRes(); j++) {
+            for (int i = 0; i < Scene.vp.getHorizontalRes(); i++) {
+                pixelColour = tracer.BasicTracer(i,j);
+                buffer.setRGB(i,Scene.vp.getVerticalRes() - j - 1,pixelColour.toInt());
             }
         }
         try {
