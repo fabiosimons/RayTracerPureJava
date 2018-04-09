@@ -1,17 +1,7 @@
 package Engine;
 
-import Utility.Color;
-import World.Scene;
-import com.jogamp.opengl.GLAutoDrawable;
-import com.jogamp.opengl.GLCapabilities;
-import com.jogamp.opengl.GLEventListener;
-import com.jogamp.opengl.GLProfile;
-import com.jogamp.opengl.awt.GLCanvas;
-
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.WindowAdapter;
-import java.awt.event.WindowEvent;
 import java.awt.image.BufferedImage;
 
 // THIS CLASS IS PURELY FOR VISUAL FEEDBACK NOTHING ELSE

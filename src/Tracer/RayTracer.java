@@ -29,26 +29,27 @@ public class RayTracer {
                 if (rayhit.hit) {
                     rayhit.setRay(ray);
                     tempColour = rayhit.material.shade(rayhit);
+
                 } else {
                     tempColour = Scene.background_color;
                 }
-
                 pixelColour.add(tempColour);
             }
         }
         pixelColour.divide(Sampler.getNumOfSamples());
         pixelColour = checkBoundary(pixelColour);
+        pixelColour.convertTo255();
         return pixelColour;
+    }
+    public Color checkBoundary(Color colour){
+        if (colour.getR() > 1.0)
+            colour.setR(1.0f);
+        if(colour.getG() > 1.0)
+            colour.setG(1.0f);
+        if(colour.getB() > 1.0)
+            colour.setB(1.0f);
+        return colour;
     }
 
-    public Color checkBoundary(Color pixelColour){
-        if (pixelColour.getR() > 255.0)
-            pixelColour.setR(255.0f);
-        if(pixelColour.getG() > 255.0)
-            pixelColour.setG(255.0f);
-        if(pixelColour.getB() > 255.0)
-            pixelColour.setB(255.0f);
-        return pixelColour;
-    }
 }
 

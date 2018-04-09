@@ -39,7 +39,7 @@ public class Pinhole extends Camera {
             for(int width = 0; width < Scene.vp.getHorizontalRes(); width++){
                 pixelColour = tracer.BasicTracer(width,height);
                 buffer.setRGB(width,Scene.vp.getVerticalRes()-height-1,pixelColour.toInt());
-                r.setPixel(buffer);
+                //r.setPixel(buffer);
             }
         }
         try {

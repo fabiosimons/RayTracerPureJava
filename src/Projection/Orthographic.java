@@ -23,7 +23,7 @@ public class Orthographic extends Camera {
             for (int i = 0; i < Scene.vp.getHorizontalRes(); i++) {
                 pixelColour = tracer.BasicTracer(i,j);
                 buffer.setRGB(i,Scene.vp.getVerticalRes() - j - 1,pixelColour.toInt());
-                r.setPixel(buffer);
+//                r.setPixel(buffer);
             }
         }
         try {

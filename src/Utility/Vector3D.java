@@ -31,6 +31,15 @@ public class Vector3D {
 
         return vector;
     }
+    public Vector3D add(Normal n){
+        Vector3D vector = new Vector3D(
+                (this.getX()+ n.getX()),
+                (this.getY() + n.getY()),
+                (this.getZ() + n.getZ())
+        );
+
+        return vector;
+    }
 
     // SUBTRACT
     public Vector3D sub(Vector3D v){

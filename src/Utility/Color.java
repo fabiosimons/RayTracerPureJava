@@ -30,10 +30,20 @@ public class Color {
         this.g += color.getG();
         this.b += color.getB();
     }
+    public Color plus(Color color){
+        return new Color(this.r + color.r,
+        this.g + color.g,
+        this.b + color.b);
+    }
     public void divide(int divide){
         this.r /= divide;
         this.g /= divide;
         this.b /= divide;
+    }
+    public void convertTo255(){
+        this.r *= 255.0f;
+        this.g *= 255.0f;
+        this.b *= 255.0f;
     }
     public int toInt(){
         int rgb = (int)getR();

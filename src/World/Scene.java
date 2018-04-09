@@ -19,8 +19,8 @@ public class Scene {
     public static Color background_color = new Color(0.0f,0.0f,0.0f);
     private Sphere sphere;
     private Plane plane;
-    public AmbientLight ambient;
-    private Matte matte;
+    public Light ambient;
+    public static PhongModel phong;
     public PointLight light;
     private static ArrayList<Object> objects;
     public static ArrayList<Light> lights;
@@ -30,53 +30,44 @@ public class Scene {
     public Scene(int width, int height, float pixelSize){
         vp = new ViewPlane(width, height, pixelSize);
 
-        r = new RenderInRealTime(width, height);
+        //r = new RenderInRealTime(width, height);
 
         objects = new ArrayList<>();
         lights = new ArrayList<>();
 
-        matte = new Matte();
-        matte.setCoefficients(0.1,0.9);
-        matte.setColour(new Color(255.0f,0.0f,0.0f));
+        phong = new PhongModel();
+        phong.setCoefficients(0.1,0.4, 0.1);
+        phong.setColour(new Color(1.0f,0.0f,0.0f));
 
-        ambient = new AmbientLight();
-        ambient.ls = 1.0;
-        ambient.color = new Color(255.0f,255.0f,255.0f);
+        ambient = new AmbientLight(new Color(1.0f,1.0f,1.0f), 0.5);
         addLight(ambient);
 
-        light = new PointLight();
-        light.location = (new Vector3D(100,50,150));
-        light.ls = 3;
-        light.color = new Color(255.0f,255.0f,255.0f);
+        light = new PointLight(new Color(1.0f,1.0f,1.0f),3,new Vector3D(0,150,250));
         addLight(light);
 
         sphere = new Sphere(new Point3D(200.0,0.0,0.0),100);
-        sphere.material = matte;
+        sphere.setMaterial(phong);
         addObject(sphere);
 
+        phong = new PhongModel();
+        phong.setCoefficients(0.5,0.2, 0.2);
+        phong.setColour(new Color(0.0f,0.0f,1.0f));
         sphere = new Sphere(new Point3D(0.0,0.0,0.0),100);
-        sphere.material = matte;
+        sphere.setMaterial(phong);
         addObject(sphere);
 
-        matte = new Matte();
-        matte.setCoefficients(0.1,0.9);
-        matte.setColour(new Color(0.0f,255.0f,255.0f));
-        sphere = new Sphere(new Point3D(-200.0,0.0,0.0),100);
-        sphere.material = matte;
-        addObject(sphere);
-
-        matte = new Matte();
-        matte.setCoefficients(0.1,0.9);
-        matte.setColour(new Color(0.0f,0.0f,255.0f));
+        phong = new PhongModel();
+        phong.setCoefficients(0.2,0.7, 0.2);
+        phong.setColour(new Color(1.0f,1.0f,0.0f));
         sphere = new Sphere(new Point3D(400.0,0.0,0.0),100);
-        sphere.material = matte;
+        sphere.setMaterial(phong);
         addObject(sphere);
 
-        matte = new Matte();
-        matte.setCoefficients(0.1,0.9);
-        matte.setColour(new Color(200.0f,150.0f,125.0f));
+        phong = new PhongModel();
+        phong.setCoefficients(0.1,0.4, 0.1);
+        phong.setColour(new Color(0.5f,0.5f,0.5f));
         plane = new Plane(new Point3D(0.0,0.0,0.0), new Normal(0.0,1.0,0.2));
-        plane.material = matte;
+        plane.material = phong;
         addObject(plane);
     }
     // ADD OBJECTS TO SCENE (arraylist)
@@ -91,7 +82,6 @@ public class Scene {
         RayHit rayhit = new RayHit(Main.s);
         Normal normal = new Normal();
         Point3D localHitPoint = new Point3D();
-
         double tmin = Double.MAX_VALUE;
 
         for(Object o : objects){

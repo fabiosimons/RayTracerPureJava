@@ -11,5 +11,5 @@ public abstract class Light {
     public Light(){
     }
     public abstract Vector3D getDirection(RayHit rayHit);
-    public abstract Color incidentRadiance(RayHit rayHit);
+    public abstract Color intensity(RayHit rayHit);
 }
