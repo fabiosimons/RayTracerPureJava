@@ -1,8 +1,7 @@
 package Light;
 
-import Utility.Color;
-import Utility.RayHit;
-import Utility.Vector3D;
+import Utility.*;
+import World.Scene;
 
 //NEEDS WORK, NOT ALL COLOURED SPHERES WORK IF IT ISNT A WHITE LIGHT;
 //OKAY FOR NOW AS I ONLY INTEND TO WORK WITH WHITE LIGHT UNLESS THERE IS MORE TIME.
@@ -10,9 +9,10 @@ import Utility.Vector3D;
 public class PointLight extends Light {
     private double ls;
     private Color color;
-    private Vector3D location;
+    protected Vector3D location;
 
     public PointLight(Color color, double ls, Vector3D location){
+        super();
         setColor(color);
         setLs(ls);
         setLocation(location);
@@ -36,5 +36,25 @@ public class PointLight extends Light {
     }
     public void setLocation(Vector3D location){
         this.location = location;
+    }
+
+    public Vector3D getLocation() {
+        return location;
+    }
+    public boolean shadow(RayHit rayhit, Ray ray){
+            double distance = distance(ray.getOrigin(), getLocation());
+            for(GeometricObjects.Object o : Scene.objects){
+                double temp = o.shadowHit(ray,rayhit);
+                if (temp != 0 && temp < distance){
+                    return true;
+            }
+        }
+
+        return false;
+    }
+    public double distance(Point3D p, Vector3D v){
+        return Math.sqrt(Math.pow(p.getX() - v.getX(),2) +
+                Math.pow(p.getY() - v.getY(),2));
+
     }
 }

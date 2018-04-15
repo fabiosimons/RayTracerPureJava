@@ -22,7 +22,7 @@ public class Sphere extends Object {
     }
 
     @Override
-    public double Hit(Ray ray, RayHit rayhit) {
+    public double intersect(Ray ray, RayHit rayhit) {
         double a = ray.getDirection().dot(ray.getDirection());
         double b = 2 * ray.getOrigin().sub(getCenter()).dot(ray.getDirection());
         double c = ray.getOrigin().sub(getCenter()).dot(ray.getOrigin().sub(getCenter())) - getRadius() * getRadius();
@@ -41,19 +41,40 @@ public class Sphere extends Object {
                 rayhit.LocalHitPoint = ray.getOrigin().add(ray.getDirection().multiplyAWithVector(t));
                 return t;
             }
-                t = (-b - Math.sqrt(d)) / (2.0 * a);
-                if (t > 10e-9) {
-
-                    Vector3D x = new Vector3D(ray.getOrigin().sub(getCenter()));
-                    Vector3D y = new Vector3D(ray.getDirection().multiplyAWithVector(t));
-                    rayhit.normal = new Normal(x.add(y).divideWithDouble(getRadius()));
-                    rayhit.LocalHitPoint = ray.getOrigin().add(ray.getDirection().multiplyAWithVector(t));
-                    return t;
+            t = (-b + Math.sqrt(d)) / (2.0 * a);
+            if (t > 10e-9) {
+                Vector3D x = new Vector3D(ray.getOrigin().sub(getCenter()));
+                Vector3D y = new Vector3D(ray.getDirection().multiplyAWithVector(t));
+                rayhit.normal = new Normal(x.add(y).divideWithDouble(getRadius()));
+                rayhit.LocalHitPoint = ray.getOrigin().add(ray.getDirection().multiplyAWithVector(t));
+                return t;
                 }
             }
             return 0.0;
         }
 
+    @Override
+    public double shadowHit(Ray ray, RayHit rayHit) {
+        double a = ray.getDirection().dot(ray.getDirection());
+        double b = 2 * ray.getOrigin().sub(getCenter()).dot(ray.getDirection());
+        double c = ray.getOrigin().sub(getCenter()).dot(ray.getOrigin().sub(getCenter())) - getRadius() * getRadius();
+        double t;
+        double d = b * b - 4 * a * c;
+
+        if (d < 0.0) {
+            return 0.0;
+        } else {
+            t = (-b - Math.sqrt(d)) / (2.0 * a);
+            if (t > 10e-9) {
+                return t;
+            }
+            t = (-b + Math.sqrt(d)) / (2.0 * a);
+            if (t > 10e-9) {
+                return t;
+            }
+        }
+        return 0.0;
+    }
     public void setCenter(Point3D center){
         this.center = center;
     }

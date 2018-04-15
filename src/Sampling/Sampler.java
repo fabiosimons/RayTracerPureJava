@@ -7,7 +7,6 @@ import java.util.ArrayList;
 public abstract class Sampler {
     public static int numOfSamples;
     public static int sampleSets;
-    public static ArrayList<Point2D> diskSamples;
 
     public Sampler(int numOfSamples){
         setNumOfSamples(numOfSamples);
@@ -21,10 +20,10 @@ public abstract class Sampler {
     public void setSampleSets(int samples){
         this.sampleSets = (int) Math.sqrt(samples);
     }
-    public static int getNumOfSamples(){
+    public int getNumOfSamples(){
         return numOfSamples;
     }
-    public static int getSampleSets(){
+    public int getSampleSets(){
         return sampleSets;
     }
 }

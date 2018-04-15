@@ -1,6 +1,7 @@
 package Light;
 
 import Utility.Color;
+import Utility.Ray;
 import Utility.RayHit;
 import Utility.Vector3D;
 
@@ -25,6 +26,12 @@ public class AmbientLight extends Light {
         Color c = color.multiplyWithDouble(ls);
         return c;
     }
+
+    @Override
+    public boolean shadow(RayHit rayhit, Ray ray) {
+        return false;
+    }
+
     public void setLs(double ls){
         this.ls = ls;
     }

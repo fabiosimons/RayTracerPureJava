@@ -6,7 +6,12 @@ import Utility.RayHit;
 
 public class Triangle extends Object {
     @Override
-    public double Hit(Ray ray, RayHit rayhit) {
+    public double intersect(Ray ray, RayHit rayhit) {
+        return 0;
+    }
+
+    @Override
+    public double shadowHit(Ray ray, RayHit rayHit) {
         return 0;
     }
 }

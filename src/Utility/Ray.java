@@ -16,6 +16,8 @@ public class Ray {
     public Ray(Ray ray){
         setRay(ray);
     }
+
+    //SETTERS AND GETTERS
     public void setRay(Ray ray){
         this.ray = ray;
     }

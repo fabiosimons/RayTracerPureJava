@@ -95,7 +95,6 @@ public class Normal {
         setY(getY()/length);
         setZ(getZ()/length);
     }
-    //
 
     // SETTERS AND GETTERS
     public double getX(){

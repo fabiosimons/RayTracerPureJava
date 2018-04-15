@@ -1,6 +1,7 @@
 package Light;
 
 import Utility.Color;
+import Utility.Ray;
 import Utility.RayHit;
 import Utility.Vector3D;
 
@@ -21,6 +22,12 @@ public class DirectionalLight extends Light {
     public Color intensity(RayHit rayHit) {
         return null;
     }
+
+    @Override
+    public boolean shadow(RayHit rayhit, Ray ray) {
+        return false;
+    }
+
     public void setLS(double ls){
         this.ls = ls;
     }

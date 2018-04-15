@@ -11,5 +11,6 @@ public abstract class Object {
 
     public Color color;
     public Material material;
-    public abstract double Hit(Ray ray, RayHit rayhit);
+    public abstract double intersect(Ray ray, RayHit rayhit);
+    public abstract double shadowHit(Ray ray, RayHit rayHit);
 }

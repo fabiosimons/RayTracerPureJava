@@ -12,8 +12,10 @@ public abstract class Camera {
     protected Vector3D u,v,w;
     protected double distance;
 
-    public void computeUVW(){
+    public Camera(){
 
+    }
+    public void computeUVW(){
         w = new Vector3D(eye.sub(lookat));   // eye to lookout
         w.normalise();
 

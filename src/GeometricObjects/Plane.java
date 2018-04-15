@@ -15,8 +15,9 @@ public class Plane extends Object {
     public Color getColor(){
         return this.color;
     }
+
     @Override
-    public double Hit(Ray ray, RayHit rayhit) {
+    public double intersect(Ray ray, RayHit rayhit) {
         double t = point.sub(ray.getOrigin()).dot(normal) / ray.getDirection().dot(normal);
 
         if (t > 10E-9) {
@@ -27,7 +28,14 @@ public class Plane extends Object {
             return 0.0;
         }
     }
-    public void setMaterialColour(Color c){
 
+    @Override
+    public double shadowHit(Ray ray, RayHit rayHit) {
+        double t = point.sub(ray.getOrigin()).dot(normal) / ray.getDirection().dot(normal);
+
+        if (t > 10E-9) {
+           return t;
+        }
+        return 0.0;
     }
 }

@@ -5,7 +5,7 @@ import Utility.Normal;
 import Utility.RayHit;
 import Utility.Vector3D;
 
-public class GlossySpecularBRDF extends BRDFS {
+public class SpecularBRDF extends BRDFS {
     public Color colour;
     public double coefficient;
     public double shininessConstant;
@@ -27,13 +27,14 @@ public class GlossySpecularBRDF extends BRDFS {
         double x = 2 * reflectedRay.dot(rayhit.normal);
         Normal normal = rayhit.normal.multiplyAWithNormal(x);
         Vector3D minusIncomingRay =
-               new Vector3D(-incomingRay.getX(),-incomingRay.getY(),-incomingRay.getZ());
+                new Vector3D(-incomingRay.getX(),-incomingRay.getY(),-incomingRay.getZ());
         Vector3D r = minusIncomingRay.add(normal);
-        double RmDotV = r.dot(reflectedRay);
+
+        double rDotReflected = r.dot(reflectedRay);
 
         // needs to be more than 0 otherwise it will just return black and we've already accounted for this.
-        if(RmDotV > 0.0){
-            c = colour.multiplyWithDouble(coefficient * Math.pow(RmDotV,shininessConstant));
+        if(rDotReflected > 0.0){
+            c = colour.multiplyWithDouble(coefficient * Math.pow(rDotReflected,shininessConstant));
         }
         return c;
     }

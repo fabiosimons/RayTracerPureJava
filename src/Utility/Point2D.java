@@ -15,10 +15,10 @@ public class Point2D {
         setY(y);
     }
 
+    //SETTERS AND GETTERS
     public void setY(double y) {
         this.y = y;
     }
-
     public void setX(double x) {
         this.x = x;
     }

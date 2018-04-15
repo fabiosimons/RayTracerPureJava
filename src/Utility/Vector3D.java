@@ -20,6 +20,11 @@ public class Vector3D {
         setY(vector.getY());
         setZ(vector.getZ());
     }
+    public Vector3D(Normal normal){
+        setX(normal.getX());
+        setY(normal.getY());
+        setZ(normal.getZ());
+    }
 
     // ADD TWO VECTORS
     public Vector3D add(Vector3D v){
@@ -56,6 +61,14 @@ public class Vector3D {
                 (this.getX()- p.getX()),
                 (this.getY() - p.getY()),
                 (this.getZ() - p.getZ())
+        );
+        return vector;
+    }
+    public Vector3D sub(Normal n){
+        Vector3D vector = new Vector3D(
+                (this.getX()- n.getX()),
+                (this.getY() - n.getY()),
+                (this.getZ() - n.getZ())
         );
         return vector;
     }
@@ -140,9 +153,13 @@ public class Vector3D {
         setY(getY()/length);
         setZ(getZ()/length);
     }
+    public Vector3D inverse(){
+        return new Vector3D(-getX(),-getY(),-getZ());
+    }
     public String toString(){
         return "X : " + getX() + " Y : " + getY()+ " Z: " + getZ();
     }
+
 // SETTERS AND GETTERS
     public double getX(){
         return this.x;

@@ -1,9 +1,6 @@
 package Light;
 
-import Utility.Color;
-import Utility.Point3D;
-import Utility.RayHit;
-import Utility.Vector3D;
+import Utility.*;
 
 public abstract class Light {
     protected boolean shadows;
@@ -12,4 +9,5 @@ public abstract class Light {
     }
     public abstract Vector3D getDirection(RayHit rayHit);
     public abstract Color intensity(RayHit rayHit);
+    public abstract boolean shadow(RayHit rayhit, Ray ray);
 }

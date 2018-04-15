@@ -1,16 +1,11 @@
 package Projection;
 
-import Engine.RenderInRealTime;
-import Sampling.JitteredSampling;
-import Sampling.Sampler;
+
 import Tracer.RayTracer;
 import Utility.*;
 import Utility.Color;
 import World.Scene;
-import World.ViewPlane;
-
 import javax.imageio.ImageIO;
-import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
 
@@ -18,35 +13,31 @@ import java.io.File;
  * PERSPECTIVE RAY TRACING
  */
 public class Pinhole extends Camera {
-
-    RenderInRealTime r = Scene.r;
+    private File image;
+    private BufferedImage buffer;
 
     public Pinhole(Point3D eye, Point3D lookat, double FOV){
         this.eye = new Point3D(eye);
         this.lookat = new Point3D(lookat);
         this.distance = Scene.vp.getVerticalRes() / 2 / Math.tan(Math.toRadians(FOV));
         computeUVW();
+        image = new File("Traced.png");
+        buffer = new BufferedImage(Scene.vp.getHorizontalRes(),Scene.vp.getVerticalRes(), BufferedImage.TYPE_INT_RGB);
     }
 
     @Override
     public void render() {
-        File image = new File("Traced.png");
-        BufferedImage buffer = new BufferedImage(Scene.vp.getHorizontalRes(),Scene.vp.getVerticalRes(), BufferedImage.TYPE_INT_RGB);
         RayTracer tracer = new RayTracer();
         Color pixelColour;
 
         for(int height = 0; height < Scene.vp.getVerticalRes(); height++){
             for(int width = 0; width < Scene.vp.getHorizontalRes(); width++){
-                pixelColour = tracer.BasicTracer(width,height);
+
+                pixelColour = tracer.trace(width,height);
                 buffer.setRGB(width,Scene.vp.getVerticalRes()-height-1,pixelColour.toInt());
-                //r.setPixel(buffer);
             }
         }
-        try {
-                ImageIO.write(buffer, "PNG", image);
-                } catch (Exception e) {
-                System.out.println("Can't output image");
-                }
+        GenerateImage();
     }
 
     @Override
@@ -63,6 +54,13 @@ public class Pinhole extends Camera {
         ray = new Ray(this.eye, direction);
 
         return ray;
+    }
 
+    public void GenerateImage() {
+        try {
+            ImageIO.write(buffer, "PNG", image);
+        } catch (Exception e) {
+            System.out.println("Can't output image");
+        }
     }
 }
