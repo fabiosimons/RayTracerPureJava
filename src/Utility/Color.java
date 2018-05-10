@@ -18,6 +18,9 @@ public class Color {
         setG(color.g);
         setB(color.b);
     }
+    public Color(int rgb){
+        fromInt(rgb);
+    }
     public Color multiplyWithDouble(double x){
         float r = this.r * (float) x;
         float g = this.g * (float) x;
@@ -57,6 +60,11 @@ public class Color {
         float b = getB() * c.getB();
         return new Color(r,g,b);
     }
+    public void fromInt(int rgb) {
+        this.r = (rgb >> 16 & 0xff) / 255;
+        this.g = (rgb >> 8 & 0xff) / 255;
+        this.b = (rgb >> 0 & 0xff) / 255;
+    }
     public String toString(){
         return "R : " + getR() + ", G: " + getG() + ", B : " + getB();
     }
@@ -64,15 +72,12 @@ public class Color {
     public void setR(float r) {
         this.r = r;
     }
-
     public void setG(float g) {
         this.g = g;
     }
-
     public void setB(float b) {
         this.b = b;
     }
-
     public float getR(){
         return this.r;
     }

@@ -8,7 +8,7 @@ import Utility.Vector3D;
 public abstract class Camera {
     protected Point3D eye;
     protected Point3D lookat;
-    protected Vector3D up = new Vector3D(0.00424,1.0,0.00764);
+    protected Vector3D up = new Vector3D(0.004,1.0,0.005);
     protected Vector3D u,v,w;
     protected double distance;
 

@@ -4,6 +4,7 @@ package GeometricObjects;
 import Utility.*;
 import Utility.Color;
 import Material.*;
+import Texture.*;
 
 public class Sphere extends Object {
     private double radius;
@@ -16,9 +17,11 @@ public class Sphere extends Object {
         setRadius(radius);
         setMaterial(material);
     }
-    public Sphere(Point3D center, double radius){
+    public Sphere(Point3D center, double radius, Material material, Texture texture){
         setRadius(radius);
         setCenter(center);
+        setMaterial(material);
+        setTexture(texture);
     }
 
     @Override
@@ -38,7 +41,6 @@ public class Sphere extends Object {
                 Vector3D x = new Vector3D(ray.getOrigin().sub(getCenter()));
                 Vector3D y = new Vector3D(ray.getDirection().multiplyAWithVector(t));
                 rayhit.normal = new Normal(x.add(y).divideWithDouble(getRadius()));
-                rayhit.LocalHitPoint = ray.getOrigin().add(ray.getDirection().multiplyAWithVector(t));
                 return t;
             }
             t = (-b + Math.sqrt(d)) / (2.0 * a);
@@ -46,7 +48,6 @@ public class Sphere extends Object {
                 Vector3D x = new Vector3D(ray.getOrigin().sub(getCenter()));
                 Vector3D y = new Vector3D(ray.getDirection().multiplyAWithVector(t));
                 rayhit.normal = new Normal(x.add(y).divideWithDouble(getRadius()));
-                rayhit.LocalHitPoint = ray.getOrigin().add(ray.getDirection().multiplyAWithVector(t));
                 return t;
                 }
             }
@@ -54,7 +55,7 @@ public class Sphere extends Object {
         }
 
     @Override
-    public double shadowHit(Ray ray, RayHit rayHit) {
+    public double shadowHit(Ray ray) {
         double a = ray.getDirection().dot(ray.getDirection());
         double b = 2 * ray.getOrigin().sub(getCenter()).dot(ray.getDirection());
         double c = ray.getOrigin().sub(getCenter()).dot(ray.getOrigin().sub(getCenter())) - getRadius() * getRadius();
@@ -75,6 +76,10 @@ public class Sphere extends Object {
         }
         return 0.0;
     }
+
+    public void setTexture(Texture texture){
+        this.texture = texture;
+    }
     public void setCenter(Point3D center){
         this.center = center;
     }
@@ -90,10 +95,6 @@ public class Sphere extends Object {
     public double getRadius(){
         return this.radius;
     }
-    public Color getColor(){
-        return this.color;
-    }
-
     public void setMaterial(Material material) {
         this.material = material;
     }

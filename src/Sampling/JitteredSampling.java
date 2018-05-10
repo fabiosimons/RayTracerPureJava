@@ -20,7 +20,6 @@ public class JitteredSampling extends Sampler {
         Random rand = new Random();
         double i = x - Scene.vp.getVerticalRes() / 2 + (column + rand.nextDouble()) / getSampleSets();
         double j = y - Scene.vp.getHorizontalRes() / 2 + (row + rand.nextDouble()) / getSampleSets();
-
         return new Point2D(i, j);
     }
 }

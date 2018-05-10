@@ -25,7 +25,11 @@ public class Normal {
         setY(vector.getY());
         setZ(vector.getZ());
     }
-
+    public Normal(Point3D point){
+        setX(point.getX());
+        setY(point.getY());
+        setZ(point.getZ());
+    }
     // DOT PRODUCT
     public double dot(Vector3D v){
         double x =
@@ -53,9 +57,8 @@ public class Normal {
     }
 
     // MINUS NORMAL
-    public Normal invertNormal(Normal n){
-        Normal normal = new Normal(-this.getX(), -this.getY(), -this.getZ());
-        return normal;
+    public Normal invertNormal(){
+        return new Normal(-this.getX(), -this.getY(), -this.getZ());
 
     }
 
@@ -86,14 +89,14 @@ public class Normal {
         );
         return normal;
     }
-    public void normalise(){
-        double length = Math.sqrt(  Math.pow(getX(),2) +
-                Math.pow(getY(),2) +
-                Math.pow(getZ(),2));
 
-        setX(getX()/length);
-        setY(getY()/length);
-        setZ(getZ()/length);
+    public Normal sub(Vector3D v){
+        Normal normal = new Normal(
+                (this.getX()- v.getX()),
+                (this.getY() - v.getY()),
+                (this.getZ() - v.getZ())
+        );
+        return normal;
     }
 
     // SETTERS AND GETTERS

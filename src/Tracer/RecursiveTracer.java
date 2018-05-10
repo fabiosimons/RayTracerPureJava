@@ -20,7 +20,7 @@ public class RecursiveTracer{
                 rayhit = Scene.traceObjects(ray);
                 if(rayhit.hit) {
                     rayhit.setRay(ray);
-                    return rayhit.getMaterial().shade(rayhit);
+                    return rayhit.getMaterial().getColour(rayhit);
                 }else{
                     return Scene.background_color;
 

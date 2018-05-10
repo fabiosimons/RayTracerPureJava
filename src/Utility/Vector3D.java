@@ -93,21 +93,6 @@ public class Vector3D {
         return vector;
     }
 
-    // MODULUS AND MODULUS SQUARED
-    public double mod(){
-        double x = (this.getX() * this.getX()) +
-                   (this.getY() * this.getY()) +
-                   (this.getZ() * this.getZ());
-        x = Math.pow(x, 0.5);
-        return x;
-    }
-    public double modSquared(){
-        double x = (this.getX() * this.getX()) +
-                   (this.getY() * this.getY()) +
-                   (this.getZ() * this.getZ());
-        return x;
-    }
-
     //DOT PRODUCT
     public double dot(Vector3D v){
         double x =

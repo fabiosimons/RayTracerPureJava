@@ -1,7 +1,5 @@
 package Utility;
 
-import java.awt.*;
-
 public class Point3D {
     private double x,y,z;
 
@@ -82,32 +80,6 @@ public class Point3D {
         );
         return point;
     }
-
-    // MODULUS AND MODULUS SQUARED
-    public double mod(){
-        double x = (this.getX() * this.getX()) +
-                (this.getY() * this.getY()) +
-                (this.getZ() * this.getZ());
-        x = Math.pow(x, 0.5);
-        return x;
-    }
-    public double modSquared(){
-        double x = (this.getX() * this.getX()) +
-                (this.getY() * this.getY()) +
-                (this.getZ() * this.getZ());
-        return x;
-    }
-
-    // MULTIPLICATION OF A point AND A DOUBLE
-    public Point3D multiplyAWithPoint(double a){
-        Point3D point = new Point3D(
-                (a * this.getX()),
-                (a * this.getY()),
-                (a * this.getZ())
-        );
-        return point;
-    }
-
     // SETTERS AND GETTERS
     public void setX(double x){
         this.x = x;

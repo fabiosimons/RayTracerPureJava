@@ -3,6 +3,7 @@ package Utility;
 import World.Scene;
 import Material.*;
 import java.util.Vector;
+import Texture.*;
 
 
 public class RayHit {
@@ -15,7 +16,13 @@ public class RayHit {
     public boolean hit;
     public int depth; // IMPLEMENTED LATER FOR RECURSIVE RAY TRACING
     public Ray ray;
+    public double t;
     public Vector3D direction;
+    public Texture texture;
+    public double i,j;
+    public boolean transparent;
+    public int x;
+    public int y;
 
 
     public RayHit(Scene s){
@@ -36,7 +43,15 @@ public class RayHit {
         setDepth(r.depth);
         setDirection(r.direction);
         setScene(r.s);
+        this.t = r.t;
+        this.texture = r.texture;
+        this.i = r.i;
+        this.j = r.j;
+        this.transparent = r.transparent;
+        this.x = r.x;
+        this.y = r.y;
     }
+    public void setTexture(Texture texture){this.texture = texture;}
     public void setHit(boolean hit) {
         this.hit = hit;
     }

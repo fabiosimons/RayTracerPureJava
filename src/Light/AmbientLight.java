@@ -6,15 +6,13 @@ import Utility.RayHit;
 import Utility.Vector3D;
 
 public class AmbientLight extends Light {
-
-    private double ls;
+    private double intensity;
     private Color color;
 
 
-    public AmbientLight(Color color, double ls){
-        super();
+    public AmbientLight(Color color, double intensity){
         setColor(color);
-        setLs(ls);
+        setIntensity(intensity);
     }
     @Override
     public Vector3D getDirection(RayHit rayhit) {
@@ -23,7 +21,7 @@ public class AmbientLight extends Light {
 
     @Override
     public Color intensity(RayHit rayhit) {
-        Color c = color.multiplyWithDouble(ls);
+        Color c = color.multiplyWithDouble(intensity);
         return c;
     }
 
@@ -32,8 +30,13 @@ public class AmbientLight extends Light {
         return false;
     }
 
-    public void setLs(double ls){
-        this.ls = ls;
+    @Override
+    public Color getColor() {
+        return null;
+    }
+
+    public void setIntensity(double intensity){
+        this.intensity = intensity;
     }
     public void setColor(Color color){
         this.color = color;
