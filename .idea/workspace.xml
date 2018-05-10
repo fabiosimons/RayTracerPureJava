@@ -4,82 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/src/Material/Matte.java" line="37" mnemonic="9" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="86814770-1ee6-4fcc-a50f-fb6547e2da17" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Traced.png" afterPath="$PROJECT_DIR$/Traced.png" />
-      <change beforePath="$PROJECT_DIR$/out/production/RayTracerPureJava/BRDF/AmbientBRDF.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/RayTracerPureJava/BRDF/BRDFS.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/RayTracerPureJava/BRDF/DiffuseBRDF.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/RayTracerPureJava/BRDF/PerfectSpecularBRDF.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/RayTracerPureJava/BRDF/SpecularBRDF.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/RayTracerPureJava/Engine/Initialiser.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/RayTracerPureJava/Engine/Main.class" afterPath="$PROJECT_DIR$/out/production/RayTracerPureJava/Engine/Main.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/RayTracerPureJava/Engine/RenderInRealTime.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/RayTracerPureJava/GeometricObjects/Box.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/RayTracerPureJava/GeometricObjects/Cube.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/RayTracerPureJava/GeometricObjects/Cylinder.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/RayTracerPureJava/GeometricObjects/Object.class" afterPath="$PROJECT_DIR$/out/production/RayTracerPureJava/GeometricObjects/Object.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/RayTracerPureJava/GeometricObjects/Plane.class" afterPath="$PROJECT_DIR$/out/production/RayTracerPureJava/GeometricObjects/Plane.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/RayTracerPureJava/GeometricObjects/Sphere.class" afterPath="$PROJECT_DIR$/out/production/RayTracerPureJava/GeometricObjects/Sphere.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/RayTracerPureJava/GeometricObjects/Triangle.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/RayTracerPureJava/Light/AmbientLight.class" afterPath="$PROJECT_DIR$/out/production/RayTracerPureJava/Light/AmbientLight.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/RayTracerPureJava/Light/DirectionalLight.class" afterPath="$PROJECT_DIR$/out/production/RayTracerPureJava/Light/DirectionalLight.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/RayTracerPureJava/Light/Light.class" afterPath="$PROJECT_DIR$/out/production/RayTracerPureJava/Light/Light.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/RayTracerPureJava/Light/PointLight.class" afterPath="$PROJECT_DIR$/out/production/RayTracerPureJava/Light/PointLight.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/RayTracerPureJava/Material/Material.class" afterPath="$PROJECT_DIR$/out/production/RayTracerPureJava/Material/Material.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/RayTracerPureJava/Material/Matte.class" afterPath="$PROJECT_DIR$/out/production/RayTracerPureJava/Material/Matte.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/RayTracerPureJava/Material/PhongModel.class" afterPath="$PROJECT_DIR$/out/production/RayTracerPureJava/Material/PhongModel.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/RayTracerPureJava/Material/Reflective.class" afterPath="$PROJECT_DIR$/out/production/RayTracerPureJava/Material/Reflective.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/RayTracerPureJava/Projection/Camera.class" afterPath="$PROJECT_DIR$/out/production/RayTracerPureJava/Projection/Camera.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/RayTracerPureJava/Projection/Orthographic.class" afterPath="$PROJECT_DIR$/out/production/RayTracerPureJava/Projection/Orthographic.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/RayTracerPureJava/Projection/Pinhole.class" afterPath="$PROJECT_DIR$/out/production/RayTracerPureJava/Projection/Pinhole.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/RayTracerPureJava/Sampling/JitteredSampling.class" afterPath="$PROJECT_DIR$/out/production/RayTracerPureJava/Sampling/JitteredSampling.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/RayTracerPureJava/Sampling/RegularSampling.class" afterPath="$PROJECT_DIR$/out/production/RayTracerPureJava/Sampling/RegularSampling.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/RayTracerPureJava/Tracer/RayTracer.class" afterPath="$PROJECT_DIR$/out/production/RayTracerPureJava/Tracer/RayTracer.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/RayTracerPureJava/Tracer/RecursiveTracer.class" afterPath="$PROJECT_DIR$/out/production/RayTracerPureJava/Tracer/RecursiveTracer.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/RayTracerPureJava/Utility/Color.class" afterPath="$PROJECT_DIR$/out/production/RayTracerPureJava/Utility/Color.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/RayTracerPureJava/Utility/Normal.class" afterPath="$PROJECT_DIR$/out/production/RayTracerPureJava/Utility/Normal.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/RayTracerPureJava/Utility/Point3D.class" afterPath="$PROJECT_DIR$/out/production/RayTracerPureJava/Utility/Point3D.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/RayTracerPureJava/Utility/RayHit.class" afterPath="$PROJECT_DIR$/out/production/RayTracerPureJava/Utility/RayHit.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/RayTracerPureJava/Utility/Vector3D.class" afterPath="$PROJECT_DIR$/out/production/RayTracerPureJava/Utility/Vector3D.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/RayTracerPureJava/World/Scene.class" afterPath="$PROJECT_DIR$/out/production/RayTracerPureJava/World/Scene.class" />
-      <change beforePath="$PROJECT_DIR$/src/BRDF/AmbientBRDF.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/BRDF/BRDFS.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/BRDF/DiffuseBRDF.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/BRDF/PerfectSpecularBRDF.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/BRDF/SpecularBRDF.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/Engine/Initialiser.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/Engine/Main.java" afterPath="$PROJECT_DIR$/src/Engine/Main.java" />
-      <change beforePath="$PROJECT_DIR$/src/Engine/RenderInRealTime.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/GeometricObjects/Box.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/GeometricObjects/Cube.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/GeometricObjects/Cylinder.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/GeometricObjects/Object.java" afterPath="$PROJECT_DIR$/src/GeometricObjects/Object.java" />
-      <change beforePath="$PROJECT_DIR$/src/GeometricObjects/Plane.java" afterPath="$PROJECT_DIR$/src/GeometricObjects/Plane.java" />
-      <change beforePath="$PROJECT_DIR$/src/GeometricObjects/Sphere.java" afterPath="$PROJECT_DIR$/src/GeometricObjects/Sphere.java" />
-      <change beforePath="$PROJECT_DIR$/src/GeometricObjects/Triangle.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/Light/AmbientLight.java" afterPath="$PROJECT_DIR$/src/Light/AmbientLight.java" />
-      <change beforePath="$PROJECT_DIR$/src/Light/DirectionalLight.java" afterPath="$PROJECT_DIR$/src/Light/DirectionalLight.java" />
-      <change beforePath="$PROJECT_DIR$/src/Light/Light.java" afterPath="$PROJECT_DIR$/src/Light/Light.java" />
-      <change beforePath="$PROJECT_DIR$/src/Light/PointLight.java" afterPath="$PROJECT_DIR$/src/Light/PointLight.java" />
-      <change beforePath="$PROJECT_DIR$/src/Material/Material.java" afterPath="$PROJECT_DIR$/src/Material/Material.java" />
-      <change beforePath="$PROJECT_DIR$/src/Material/Matte.java" afterPath="$PROJECT_DIR$/src/Material/Matte.java" />
-      <change beforePath="$PROJECT_DIR$/src/Material/PhongModel.java" afterPath="$PROJECT_DIR$/src/Material/PhongModel.java" />
-      <change beforePath="$PROJECT_DIR$/src/Material/Reflective.java" afterPath="$PROJECT_DIR$/src/Material/Reflective.java" />
-      <change beforePath="$PROJECT_DIR$/src/Projection/Camera.java" afterPath="$PROJECT_DIR$/src/Projection/Camera.java" />
-      <change beforePath="$PROJECT_DIR$/src/Projection/Orthographic.java" afterPath="$PROJECT_DIR$/src/Projection/Orthographic.java" />
-      <change beforePath="$PROJECT_DIR$/src/Projection/Pinhole.java" afterPath="$PROJECT_DIR$/src/Projection/Pinhole.java" />
-      <change beforePath="$PROJECT_DIR$/src/Sampling/JitteredSampling.java" afterPath="$PROJECT_DIR$/src/Sampling/JitteredSampling.java" />
-      <change beforePath="$PROJECT_DIR$/src/Sampling/RegularSampling.java" afterPath="$PROJECT_DIR$/src/Sampling/RegularSampling.java" />
-      <change beforePath="$PROJECT_DIR$/src/Tracer/RayTracer.java" afterPath="$PROJECT_DIR$/src/Tracer/RayTracer.java" />
-      <change beforePath="$PROJECT_DIR$/src/Tracer/RecursiveTracer.java" afterPath="$PROJECT_DIR$/src/Tracer/RecursiveTracer.java" />
-      <change beforePath="$PROJECT_DIR$/src/Utility/Color.java" afterPath="$PROJECT_DIR$/src/Utility/Color.java" />
-      <change beforePath="$PROJECT_DIR$/src/Utility/Normal.java" afterPath="$PROJECT_DIR$/src/Utility/Normal.java" />
-      <change beforePath="$PROJECT_DIR$/src/Utility/Point3D.java" afterPath="$PROJECT_DIR$/src/Utility/Point3D.java" />
-      <change beforePath="$PROJECT_DIR$/src/Utility/RayHit.java" afterPath="$PROJECT_DIR$/src/Utility/RayHit.java" />
-      <change beforePath="$PROJECT_DIR$/src/Utility/Vector3D.java" afterPath="$PROJECT_DIR$/src/Utility/Vector3D.java" />
-      <change beforePath="$PROJECT_DIR$/src/World/Scene.java" afterPath="$PROJECT_DIR$/src/World/Scene.java" />
-    </list>
+    <list default="true" id="86814770-1ee6-4fcc-a50f-fb6547e2da17" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -250,8 +175,8 @@
           <file leaf-file-name="RayTracer.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/Tracer/RayTracer.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="327">
-                  <caret line="27" column="67" lean-forward="true" selection-start-line="27" selection-start-column="67" selection-end-line="27" selection-end-column="67" />
+                <state relative-caret-position="340">
+                  <caret line="27" column="67" lean-forward="false" selection-start-line="27" selection-start-column="67" selection-end-line="27" selection-end-column="67" />
                   <folding />
                 </state>
               </provider>
@@ -270,8 +195,8 @@
           <file leaf-file-name="Stripe.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/Texture/Stripe.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="269">
-                  <caret line="21" column="77" lean-forward="true" selection-start-line="21" selection-start-column="77" selection-end-line="21" selection-end-column="77" />
+                <state relative-caret-position="340">
+                  <caret line="21" column="77" lean-forward="false" selection-start-line="21" selection-start-column="77" selection-end-line="21" selection-end-column="77" />
                   <folding />
                 </state>
               </provider>
@@ -290,7 +215,7 @@
           <file leaf-file-name="Normal.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/Utility/Normal.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="433">
+                <state relative-caret-position="1683">
                   <caret line="99" column="5" lean-forward="false" selection-start-line="99" selection-start-column="5" selection-end-line="99" selection-end-column="5" />
                   <folding />
                 </state>
@@ -394,7 +319,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="629" />
     <option name="width" value="1298" />
     <option name="height" value="1047" />
@@ -416,7 +341,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -500,7 +425,7 @@
         </subPane>
       </pane>
       <pane id="Scratches" />
-      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -649,11 +574,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23329799" sideWeight="0.4875" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -675,6 +599,7 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23329799" sideWeight="0.4875" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0078125" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20235546" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1001,7 +926,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Utility/Normal.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="433">
+        <state relative-caret-position="1683">
           <caret line="99" column="5" lean-forward="false" selection-start-line="99" selection-start-column="5" selection-end-line="99" selection-end-column="5" />
           <folding />
         </state>
@@ -1025,8 +950,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Tracer/RayTracer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
-          <caret line="27" column="67" lean-forward="true" selection-start-line="27" selection-start-column="67" selection-end-line="27" selection-end-column="67" />
+        <state relative-caret-position="340">
+          <caret line="27" column="67" lean-forward="false" selection-start-line="27" selection-start-column="67" selection-end-line="27" selection-end-column="67" />
           <folding />
         </state>
       </provider>
@@ -1041,8 +966,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Texture/Stripe.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="21" column="77" lean-forward="true" selection-start-line="21" selection-start-column="77" selection-end-line="21" selection-end-column="77" />
+        <state relative-caret-position="340">
+          <caret line="21" column="77" lean-forward="false" selection-start-line="21" selection-start-column="77" selection-end-line="21" selection-end-column="77" />
           <folding />
         </state>
       </provider>
