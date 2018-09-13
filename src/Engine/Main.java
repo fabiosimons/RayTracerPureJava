@@ -7,7 +7,6 @@ import Sampling.JitteredSampling;
 import Sampling.Sampler;
 import Utility.Point3D;
 import World.Scene;
-import GUI.GUI;
 
 public class Main {
     public static Scene s;
@@ -17,12 +16,6 @@ public class Main {
     public static void main(String[] args){
         long start = System.currentTimeMillis();
         s = new Scene(600,600,1.0f);
-
-        GUI gui = new GUI();
-
-
-
-
 
         sampler = new JitteredSampling(128);
         System.out.println("Program has executed, please be patient.");

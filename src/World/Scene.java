@@ -88,7 +88,6 @@ public class Scene {
 
     }
     // ADD OBJECTS TO SCENE (arraylist)
-
     public Scene(int width, int height, float pixelSize, ArrayList objects, ArrayList lights, Color background_color){
 
 
